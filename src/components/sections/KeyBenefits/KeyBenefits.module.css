@@ -1,0 +1,82 @@
+.section {
+  position: relative;
+  z-index: 2;
+  padding-block: var(--space-6) var(--space-10);
+}
+
+.frame {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: var(--container-padding-inline);
+}
+
+.card {
+  padding: var(--space-6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  box-shadow: 0 24px 48px -28px rgb(31 21 51 / 0.3);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: 1fr;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-alt);
+  color: var(--color-primary);
+}
+
+.itemTitle {
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+}
+
+.itemDescription {
+  font-size: var(--font-size-sm);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    padding: var(--space-6) var(--space-8);
+  }
+
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-8);
+  }
+}
+
+/* Overlaps the hero's bottom edge - only holds together once the hero
+   itself switches to its layered composition (see Hero.module.css). */
+@media (min-width: 1280px) {
+  .section {
+    margin-block-start: -11.25%;
+    padding-block-start: 0;
+  }
+
+  .frame {
+    max-width: 1440px;
+    padding-inline: 40px;
+  }
+}

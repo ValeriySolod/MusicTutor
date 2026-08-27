@@ -1,0 +1,67 @@
+.section {
+  padding-block: var(--space-10);
+  background-color: var(--color-bg-alt);
+}
+
+.header {
+  max-width: 60ch;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  text-align: center;
+  margin-inline: auto;
+}
+
+.header h2 {
+  color: var(--color-text);
+}
+
+.grid {
+  margin-top: var(--space-8);
+  display: grid;
+  gap: var(--space-5);
+  grid-template-columns: 1fr;
+  counter-reset: none;
+}
+
+.card {
+  padding: var(--space-5);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.stepNumber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  font-weight: 700;
+}
+
+.cardTitle {
+  color: var(--color-text);
+}
+
+.cardDescription {
+  font-size: var(--font-size-sm);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

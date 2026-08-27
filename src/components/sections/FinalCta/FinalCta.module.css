@@ -1,0 +1,51 @@
+.section {
+  padding-block: var(--space-10);
+  background-color: var(--color-primary-dark);
+  background-image: url("/assets/backgrounds/music-waves-combined.svg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  text-align: center;
+}
+
+.heading {
+  color: var(--color-text-on-primary);
+  max-width: 24ch;
+}
+
+.subheading {
+  max-width: 50ch;
+  color: var(--color-primary-light);
+}
+
+.ctaRow {
+  margin-top: var(--space-2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.primaryCta,
+.secondaryCta {
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+}
+
+.primaryCta {
+  background-color: var(--color-text-on-primary);
+  color: var(--color-primary-dark);
+}
+
+.secondaryCta {
+  border: 1px solid var(--color-text-on-primary);
+  color: var(--color-text-on-primary);
+}
