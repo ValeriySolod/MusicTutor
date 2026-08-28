@@ -38,12 +38,15 @@
 }
 
 .card {
-  position: relative;
   display: block;
   border: 2px solid var(--border-default);
   border-radius: var(--radius-sm);
   background-color: var(--background-white);
   overflow: hidden;
+}
+
+.photoWrap {
+  position: relative;
 }
 
 .photo {
@@ -53,7 +56,7 @@
 .iconBubble {
   position: absolute;
   left: 4px;
-  top: 68%;
+  bottom: -39px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,7 +71,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding: 44px 16px 16px;
+  padding: 51px 16px 16px;
 }
 
 .name {

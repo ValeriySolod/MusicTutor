@@ -28,18 +28,20 @@ export function InstrumentCategories() {
           {INSTRUMENT_CATEGORIES.map((instrument) => (
             <li key={instrument.id}>
               <a href="#teacher-search" className={styles.card}>
-                <PhotoFrame
-                  src={instrument.photo}
-                  alt=""
-                  width={instrument.photoWidth}
-                  height={instrument.photoHeight}
-                  sizes="(min-width: 1024px) 208px, (min-width: 640px) 30vw, 45vw"
-                  className={styles.photo}
-                  cropAspectRatio="208 / 300"
-                />
-                <span className={styles.iconBubble}>
-                  <Icon name={instrument.icon} size={32} alt="" color="var(--brand-purple)" />
-                </span>
+                <div className={styles.photoWrap}>
+                  <PhotoFrame
+                    src={instrument.photo}
+                    alt=""
+                    width={instrument.photoWidth}
+                    height={instrument.photoHeight}
+                    sizes="(min-width: 1024px) 208px, (min-width: 640px) 30vw, 45vw"
+                    className={styles.photo}
+                    cropAspectRatio="208 / 300"
+                  />
+                  <span className={styles.iconBubble}>
+                    <Icon name={instrument.icon} size={32} alt="" color="var(--brand-purple)" />
+                  </span>
+                </div>
                 <span className={styles.textBlock}>
                   <span className={styles.name}>{instrument.name}</span>
                   <span className={styles.tagline}>{instrument.tagline}</span>
