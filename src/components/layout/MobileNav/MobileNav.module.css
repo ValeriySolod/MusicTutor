@@ -68,15 +68,16 @@
 
 .secondaryAction {
   padding: var(--space-3) var(--space-5);
-  border-radius: var(--radius-full);
-  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-default);
+  color: var(--brand-purple);
   font-weight: 600;
 }
 
 .primaryAction {
   padding: var(--space-3) var(--space-5);
-  border-radius: var(--radius-full);
-  background-color: var(--color-primary);
+  border-radius: var(--radius-sm);
+  background-color: var(--brand-purple);
   color: var(--color-text-on-primary);
   font-weight: 600;
 }

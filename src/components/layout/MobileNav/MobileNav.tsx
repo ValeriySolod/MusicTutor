@@ -51,7 +51,7 @@ export function MobileNav({ links }: MobileNavProps) {
             Sign In
           </button>
           <button type="button" className={styles.primaryAction}>
-            Get Started
+            Find a Teacher
           </button>
         </div>
       </nav>
