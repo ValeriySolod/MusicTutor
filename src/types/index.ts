@@ -31,17 +31,23 @@ export interface BenefitItem {
 export interface InstrumentItem {
   id: string;
   name: string;
+  tagline: string;
   icon: string;
-  teacherCount: string;
+  photo: string;
+  photoWidth: number;
+  photoHeight: number;
 }
 
 export interface TeacherItem {
   id: string;
   name: string;
-  instrument: string;
+  role: string;
+  roleIcon: string;
   rating: string;
-  reviewCount: string;
-  location: string;
+  description: string;
+  price: string;
+  format: string;
+  isFavorite: boolean;
   photo: string;
   photoWidth: number;
   photoHeight: number;
@@ -52,6 +58,7 @@ export interface StepItem {
   step: number;
   title: string;
   description: string;
+  icon: string;
 }
 
 export interface WhyPointItem {
