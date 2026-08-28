@@ -24,10 +24,10 @@ export function FinalCta() {
           </div>
           <div className={styles.photoWrap}>
             <PhotoFrame
-              src="/assets/photos/8150e7345cf944ffc7adb28bf9082d5e54cf4425.png"
+              src="/assets/photos/61a2ffcb87318c8c9e10a2e6a8b7171b1c63924f.png"
               alt="A woman smiling while playing acoustic guitar on a couch"
-              width={832}
-              height={1152}
+              width={824}
+              height={568}
               sizes="(min-width: 1024px) 660px, 100vw"
               cropAspectRatio="660 / 340"
               className={styles.photo}
