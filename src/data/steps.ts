@@ -2,31 +2,26 @@ import type { StepItem } from "@/types";
 
 export const HOW_IT_WORKS_STEPS: StepItem[] = [
   {
-    id: "step-goals",
+    id: "step-find",
     step: 1,
-    title: "Tell us your goals",
+    title: "Find",
     description:
-      "Share your instrument, skill level, and what you'd like to learn so we can find the right fit.",
+      "Search for a teacher by instrument, level, price and format.",
+    icon: "search",
   },
   {
-    id: "step-browse",
+    id: "step-choose",
     step: 2,
-    title: "Browse matched teachers",
+    title: "Choose",
     description:
-      "Compare profiles, reviews, and availability from teachers who match your goals.",
-  },
-  {
-    id: "step-trial",
-    step: 3,
-    title: "Book a trial lesson",
-    description:
-      "Schedule a first lesson online or in person to see if the teacher is the right match.",
+      "Check reviews, availability and select the best fit for you.",
+    icon: "calendar",
   },
   {
     id: "step-learn",
-    step: 4,
-    title: "Start learning",
-    description:
-      "Keep booking lessons, track your progress, and stay in touch with your teacher between sessions.",
+    step: 3,
+    title: "Learn",
+    description: "Book your lesson and start your musical journey!",
+    icon: "music-note-bold",
   },
 ];

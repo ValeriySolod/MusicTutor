@@ -2,31 +2,27 @@ import type { WhyPointItem } from "@/types";
 
 export const WHY_MUSICTUTOR_POINTS: WhyPointItem[] = [
   {
-    id: "expertise",
-    icon: "education",
-    title: "Verified expertise",
-    description:
-      "Teachers are vetted for credentials and teaching experience, not just musical skill.",
-  },
-  {
-    id: "community",
-    icon: "people",
-    title: "A supportive community",
-    description:
-      "Join thousands of students learning together, sharing progress, and staying motivated.",
-  },
-  {
-    id: "top-rated",
-    icon: "star-rounded",
-    title: "Consistently top-rated",
-    description:
-      "Our teachers maintain an average rating of 4.9 out of 5 across thousands of lessons.",
-  },
-  {
-    id: "safety",
+    id: "verified-teachers",
     icon: "shield-check",
-    title: "Safety first",
-    description:
-      "Identity verification, secure messaging, and protected payments keep every lesson safe.",
+    title: "Verified teachers",
+    description: "All teachers are carefully vetted and experienced.",
+  },
+  {
+    id: "flexible-schedule",
+    icon: "calendar",
+    title: "Flexible schedule",
+    description: "Choose lesson times that fit your lifestyle.",
+  },
+  {
+    id: "online-or-in-person",
+    icon: "headphones",
+    title: "Online or in-person",
+    description: "Learn from the comfort of your home or at a studio.",
+  },
+  {
+    id: "secure-payments",
+    icon: "lock",
+    title: "Secure payments",
+    description: "Safe, easy and hassle-free online payments.",
   },
 ];

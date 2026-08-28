@@ -1,51 +1,87 @@
 .section {
-  padding-block: var(--space-10);
-  background-color: var(--color-primary-dark);
-  background-image: url("/assets/backgrounds/music-waves-combined.svg");
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  background-size: cover;
+  padding-block: var(--space-4) var(--space-10);
 }
 
-.inner {
+.card {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  border-radius: 24px;
+  background-color: var(--brand-soft-lavender);
+  overflow: hidden;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   gap: var(--space-4);
-  text-align: center;
+  padding: var(--space-8) var(--space-5);
 }
 
 .heading {
-  color: var(--color-text-on-primary);
-  max-width: 24ch;
+  color: var(--text-primary);
+  max-width: 20ch;
 }
 
 .subheading {
-  max-width: 50ch;
-  color: var(--color-primary-light);
-}
-
-.ctaRow {
-  margin-top: var(--space-2);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-3);
-}
-
-.primaryCta,
-.secondaryCta {
-  padding: var(--space-3) var(--space-6);
-  border-radius: var(--radius-full);
-  font-weight: 600;
+  max-width: 40ch;
+  color: var(--text-secondary);
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .primaryCta {
-  background-color: var(--color-text-on-primary);
-  color: var(--color-primary-dark);
+  margin-top: var(--space-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 32px;
+  border-radius: var(--radius-sm);
+  background-color: var(--brand-purple);
+  color: var(--background-cream);
+  font-weight: 500;
+  font-size: 18px;
 }
 
-.secondaryCta {
-  border: 1px solid var(--color-text-on-primary);
-  color: var(--color-text-on-primary);
+.photoWrap {
+  position: relative;
+}
+
+.photo {
+  border-radius: 0;
+}
+
+@media (min-width: 1024px) {
+  .card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .text {
+    flex: 1;
+    padding: var(--space-10) var(--space-8) var(--space-10) 64px;
+  }
+
+  .heading {
+    font-size: 36px;
+  }
+
+  .photoWrap {
+    flex-shrink: 0;
+    width: 660px;
+  }
+
+  .photoWrap::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+      to right,
+      var(--brand-soft-lavender) 0%,
+      rgb(231 224 244 / 0) 55%
+    );
+  }
 }

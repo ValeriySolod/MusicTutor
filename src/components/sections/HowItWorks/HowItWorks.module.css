@@ -1,67 +1,122 @@
 .section {
   padding-block: var(--space-10);
-  background-color: var(--color-bg-alt);
+  background-color: var(--background-cream);
 }
 
 .header {
-  max-width: 60ch;
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  align-items: center;
+  gap: var(--space-4);
   text-align: center;
   margin-inline: auto;
 }
 
 .header h2 {
-  color: var(--color-text);
+  color: var(--text-primary);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 16px;
+  border-radius: 40px;
+  border: 1px solid var(--border-default);
+  background-color: var(--background-card);
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .grid {
   margin-top: var(--space-8);
-  display: grid;
-  gap: var(--space-5);
-  grid-template-columns: 1fr;
-  counter-reset: none;
-}
-
-.card {
-  padding: var(--space-5);
-  border-radius: var(--radius-md);
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: var(--space-8);
 }
 
-.stepNumber {
+.step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  text-align: center;
+}
+
+.circles {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 12px;
+}
+
+.number {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 56px;
+  height: 56px;
   border-radius: var(--radius-full);
-  background-color: var(--color-primary);
-  color: var(--color-text-on-primary);
-  font-weight: 700;
+  background-color: var(--brand-lavender-tint);
+  color: var(--text-strong);
+  font-size: 16px;
+  font-weight: 500;
 }
 
-.cardTitle {
-  color: var(--color-text);
+.iconCircle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-full);
 }
 
-.cardDescription {
-  font-size: var(--font-size-sm);
+.iconCircle[data-variant="lavender"] {
+  background-color: var(--brand-lavender);
 }
 
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.iconCircle[data-variant="blush"] {
+  background-color: var(--accent-blush-pink);
+}
+
+.stepTitle {
+  color: var(--text-primary);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.stepDescription {
+  max-width: 300px;
+  color: var(--text-tertiary);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.connector {
+  display: none;
 }
 
 @media (min-width: 1024px) {
   .grid {
-    grid-template-columns: repeat(4, 1fr);
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-6);
+  }
+
+  .step {
+    flex: 1;
+  }
+
+  .connector {
+    display: block;
+    position: absolute;
+    top: 28px;
+    left: calc(50% + 92px);
+    width: calc(100% - 92px);
+    border-top: 1.5px dashed var(--border-default);
   }
 }
