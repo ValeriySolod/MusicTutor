@@ -23,7 +23,7 @@ export function Footer() {
         <div className={styles.top}>
           <div className={styles.brandBlock}>
             <a href="#hero" className={styles.brand}>
-              <Icon name="logo-music-note" size={33} alt="" />
+              <Icon name="logo-music-note" size={33} alt="" color="var(--brand-purple)" />
               <span>MusicTutor</span>
             </a>
             <p className={styles.tagline}>
