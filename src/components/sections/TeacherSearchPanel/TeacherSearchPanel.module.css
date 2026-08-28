@@ -1,75 +1,103 @@
 .section {
-  padding: 0 var(--container-padding-inline) var(--space-6);
+  padding: 0 var(--container-padding-inline) var(--space-5);
 }
 
 .panel {
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-5);
-  box-shadow: 0 20px 45px -24px rgb(31 21 51 / 0.35);
+  background-color: var(--background-card);
+  border: 1px solid var(--border-default);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 18px 38px -24px rgb(31 21 51 / 0.3);
 }
 
 .heading {
-  color: var(--color-text);
-  font-size: var(--font-size-lg);
+  color: var(--text-strong);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
 }
 
 .row {
-  margin-top: var(--space-4);
+  margin-top: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  gap: 10px;
 }
 
 .field {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-1);
-}
-
-.fieldLabel {
-  font-size: var(--font-size-sm);
-  font-weight: 600;
-  color: var(--color-text-muted);
 }
 
 .fieldValue {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--space-2);
+  gap: 10px;
   width: 100%;
-  padding: var(--space-3) var(--space-4);
-  border: 1px solid var(--color-border);
+  padding: 8px 10px;
+  border: 1px solid var(--border-default);
   border-radius: var(--radius-sm);
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  font-weight: 500;
+  background-color: var(--background-white);
   text-align: left;
 }
 
+.iconCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  background-color: var(--brand-soft-lavender);
+}
+
+.fieldText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.fieldCaption {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--text-caption);
+}
+
+.fieldSelected {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .fieldValue:hover {
-  border-color: var(--color-primary);
+  border-color: var(--brand-purple);
 }
 
 .submit {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-2);
-  padding: var(--space-3) var(--space-5);
+  gap: 8px;
+  padding: 11px 15px;
   border-radius: var(--radius-sm);
-  background-color: var(--color-primary);
+  background-color: var(--brand-purple);
   color: var(--color-text-on-primary);
   font-weight: 600;
+  font-size: 12px;
   white-space: nowrap;
 }
 
 @media (min-width: 640px) {
   .row {
     flex-direction: row;
-    align-items: flex-end;
+    align-items: stretch;
   }
 
   .field {
@@ -80,16 +108,21 @@
 @media (min-width: 1280px) {
   .section {
     padding: 0;
+    width: 625px;
   }
 
   .panel {
-    padding: var(--space-5);
+    width: 625px;
+    min-height: 86px;
+    padding: 12px 13px;
+    box-shadow: 0 12px 26px -22px rgb(31 21 51 / 0.32);
   }
 
   .row {
     flex-direction: row;
     align-items: stretch;
-    gap: 12px;
+    gap: 9px;
+    margin-top: 7px;
   }
 
   .field {
@@ -97,20 +130,21 @@
   }
 
   .field:first-child {
-    width: 171px;
+    width: 168px;
   }
 
   .field:nth-child(2) {
-    width: 246px;
+    width: 252px;
   }
 
   .fieldValue {
-    height: 60px;
+    height: 38px;
+    padding: 7px 9px;
   }
 
   .submit {
-    width: 183px;
-    height: 60px;
+    width: 154px;
+    height: 38px;
     border-radius: var(--radius-sm);
   }
 }
