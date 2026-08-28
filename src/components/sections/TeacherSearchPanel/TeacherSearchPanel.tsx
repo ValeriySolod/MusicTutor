@@ -15,35 +15,41 @@ export function TeacherSearchPanel() {
 
         <div className={styles.row}>
           <div className={styles.field}>
-            <span id="search-instrument-label" className={styles.fieldLabel}>
-              Instrument
-            </span>
             <button
               type="button"
               className={styles.fieldValue}
-              aria-labelledby="search-instrument-label search-instrument-value"
+              aria-label="Instrument: Singing"
             >
-              <span id="search-instrument-value">Singing</span>
-              <Icon name="chevron-down" size={16} alt="" />
+              <span className={styles.iconCircle}>
+                <Icon name="microphone" size={18} alt="" color="var(--brand-purple)" />
+              </span>
+              <span className={styles.fieldText}>
+                <span className={styles.fieldCaption}>Instrument</span>
+                <span className={styles.fieldSelected}>Singing</span>
+              </span>
+              <Icon name="chevron-down" size={16} alt="" color="var(--brand-purple)" />
             </button>
           </div>
 
           <div className={styles.field}>
-            <span id="search-format-label" className={styles.fieldLabel}>
-              Format
-            </span>
             <button
               type="button"
               className={styles.fieldValue}
-              aria-labelledby="search-format-label search-format-value"
+              aria-label="Format: Online or In-Person"
             >
-              <span id="search-format-value">Online or In-Person</span>
-              <Icon name="chevron-down" size={16} alt="" />
+              <span className={styles.iconCircle}>
+                <Icon name="internet" size={18} alt="" color="var(--brand-purple)" />
+              </span>
+              <span className={styles.fieldText}>
+                <span className={styles.fieldCaption}>Format</span>
+                <span className={styles.fieldSelected}>Online or In-Person</span>
+              </span>
+              <Icon name="chevron-down" size={16} alt="" color="var(--brand-purple)" />
             </button>
           </div>
 
           <button type="button" className={styles.submit}>
-            <Icon name="search" size={18} alt="" />
+            <Icon name="search" size={18} alt="" color="#ffffff" />
             Find a Teacher
           </button>
         </div>

@@ -124,6 +124,35 @@ ol {
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1440px;
+
+  /* Header/Hero/KeyBenefits refresh tokens */
+  --text-primary: rgba(0, 0, 0, 0.9);
+  --text-secondary: rgba(0, 0, 0, 0.6);
+  --text-tertiary: rgba(0, 0, 0, 0.55);
+  --text-caption: rgba(0, 0, 0, 0.45);
+  --text-strong: rgba(0, 0, 0, 0.7);
+  --text-placeholder: rgba(0, 0, 0, 0.4);
+
+  --brand-purple: #6757b9;
+  --brand-lavender: #dbd0ed;
+  --brand-soft-lavender: #e7e0f4;
+  --brand-lavender-tint: #efe9f8;
+  --brand-purple-hover: #7e70c4;
+  --brand-purple-pressed: #8d81ca;
+
+  --accent-blush-pink: #fcdddb;
+  --accent-coral: #d88179;
+  --accent-gold-star: #edb748;
+
+  --background-white: #ffffff;
+  --background-card: #fdfcfa;
+  --background-cream: #faf2ef;
+  --background-blush: #fdeeed;
+
+  --border-default: #eaeaea;
+  --border-subtle: #e5e5e5;
+
+  --icon-gray: #7c7c7c;
 }
 
 /* ------------------------------------------------------------------ */

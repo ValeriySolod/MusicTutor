@@ -9,7 +9,7 @@ export function Header() {
     <header className={styles.header}>
       <Container className={styles.inner}>
         <a href="#hero" className={styles.brand}>
-          <Icon name="logo-music-note" size={28} alt="" />
+          <Icon name="logo-music-note" size={22} alt="" color="var(--brand-purple)" />
           <span>MusicTutor</span>
         </a>
 
@@ -30,7 +30,7 @@ export function Header() {
             Sign In
           </button>
           <button type="button" className={styles.primaryAction}>
-            Get Started
+            Find a Teacher
           </button>
         </div>
 

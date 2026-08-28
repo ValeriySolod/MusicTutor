@@ -19,7 +19,7 @@ export function KeyBenefits() {
             {KEY_BENEFITS.map((benefit) => (
               <li key={benefit.id} className={styles.item}>
                 <div className={styles.iconWrap}>
-                  <Icon name={benefit.icon} size={24} alt="" />
+                  <Icon name={benefit.icon} size={28} alt="" color="var(--brand-purple)" />
                 </div>
                 <h3 className={styles.itemTitle}>{benefit.title}</h3>
                 <p className={styles.itemDescription}>{benefit.description}</p>
