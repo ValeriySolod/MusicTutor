@@ -14,7 +14,7 @@ export function Hero() {
           width={1280}
           height={853}
           priority
-          sizes="100vw"
+          sizes="(min-width: 1280px) 50vw, 100vw"
           cropAspectRatio="3 / 2"
           className={styles.photoFrame}
         />
