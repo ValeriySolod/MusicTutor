@@ -150,6 +150,110 @@
   }
 }
 
+@media (max-width: 639px) {
+  .footer {
+    padding-block: 28px 24px;
+  }
+
+  .top {
+    gap: 18px;
+  }
+
+  .brandBlock {
+    gap: 12px;
+  }
+
+  .brand {
+    gap: 6px;
+    font-size: 16px;
+  }
+
+  .brand svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .tagline {
+    max-width: 178px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .social {
+    gap: 8px;
+  }
+
+  .social a,
+  .social button {
+    width: 22px;
+    height: 22px;
+  }
+
+  .social svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  .linkGroups {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 18px;
+    row-gap: 18px;
+  }
+
+  .linkGroupTitle {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .linkGroup ul {
+    margin-top: 10px;
+    gap: 8px;
+  }
+
+  .linkGroup a,
+  .linkGroup button {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .newsletter {
+    grid-column: 1 / -1;
+  }
+
+  .newsletterDescription {
+    margin-top: 10px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .subscribeForm {
+    margin-top: 8px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 100px;
+    gap: 8px;
+  }
+
+  .subscribeInput,
+  .subscribeButton {
+    height: 34px;
+    font-size: 11px;
+  }
+
+  .subscribeInput {
+    padding-inline: 14px;
+  }
+
+  .divider {
+    margin-top: 20px;
+  }
+
+  .bottom {
+    margin-top: 14px;
+    font-size: 9px;
+    line-height: 12px;
+  }
+}
+
 @media (min-width: 1024px) {
   .linkGroups {
     grid-template-columns: repeat(4, 1fr);

@@ -52,6 +52,24 @@
   border-radius: 0;
 }
 
+@media (max-width: 639px) {
+  .photoWrap::before {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    top: 0;
+    z-index: 1;
+    height: 104px;
+    pointer-events: none;
+    background: linear-gradient(
+      180deg,
+      var(--brand-soft-lavender) 0%,
+      rgb(231 224 244 / 0.72) 38%,
+      rgb(231 224 244 / 0) 100%
+    );
+  }
+}
+
 @media (min-width: 1024px) {
   .card {
     flex-direction: row;
@@ -78,6 +96,7 @@
     position: absolute;
     inset: 0;
     z-index: 1;
+    height: auto;
     background: linear-gradient(
       to right,
       var(--brand-soft-lavender) 0%,

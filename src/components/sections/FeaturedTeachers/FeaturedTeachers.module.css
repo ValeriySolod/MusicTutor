@@ -157,6 +157,54 @@
   }
 }
 
+@media (max-width: 639px) {
+  .section {
+    padding-block: 44px;
+  }
+
+  .header {
+    max-width: 300px;
+  }
+
+  .grid {
+    margin-top: 28px;
+    gap: 24px;
+  }
+
+  .card {
+    max-width: 374px;
+    margin-inline: auto;
+  }
+
+  .photo {
+    aspect-ratio: 374 / 302 !important;
+  }
+
+  .photo :global(img) {
+    object-fit: cover;
+  }
+
+  .card:nth-child(1) .photo :global(img) {
+    object-position: center;
+    transform: scaleX(-1);
+  }
+
+  .card:nth-child(2) .photo :global(img),
+  .card:nth-child(4) .photo :global(img) {
+    object-position: center 18%;
+  }
+
+  .viewAll {
+    width: 264px;
+    height: 44px;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: var(--brand-purple);
+    background-color: var(--brand-purple);
+    color: var(--color-text-on-primary);
+  }
+}
+
 @media (min-width: 1024px) {
   .grid {
     grid-template-columns: repeat(4, 1fr);
