@@ -3,21 +3,39 @@
   width: 100%;
   overflow: hidden;
   background: var(--background-cream);
+  min-height: 590px;
 }
 
 .photoLayer {
-  position: relative;
-  width: 100%;
+  position: absolute;
+  inset: 0;
   z-index: 0;
 }
 
 .photoFrame {
+  height: 100%;
   border-radius: 0;
   background: transparent;
+  aspect-ratio: auto !important;
 }
 
 .photoFrame img {
-  object-position: 66% 50%;
+  object-fit: cover;
+  object-position: 78% 20%;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    100deg,
+    var(--background-cream) 0%,
+    var(--background-cream) 42%,
+    rgba(250, 242, 239, 0.75) 58%,
+    rgba(250, 242, 239, 0) 82%
+  );
 }
 
 .stack {
@@ -29,7 +47,7 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  padding: var(--space-8) var(--container-padding-inline) var(--space-5);
+  padding: 96px var(--container-padding-inline) var(--space-5);
 }
 
 .eyebrow {
@@ -50,8 +68,9 @@
 .heading {
   color: var(--text-primary);
   max-width: 100%;
-  font-size: 36px;
-  letter-spacing: -0.02em;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
 .headingLine {
@@ -74,9 +93,51 @@
   display: block;
 }
 
+@media (min-width: 768px) and (max-width: 1279px) {
+  .hero {
+    min-height: 615px;
+  }
+
+  .photoFrame img {
+    object-position: 82% 18%;
+  }
+
+  .overlay {
+    background: linear-gradient(
+      100deg,
+      var(--background-cream) 0%,
+      var(--background-cream) 48%,
+      rgba(250, 242, 239, 0.7) 58%,
+      rgba(250, 242, 239, 0) 78%
+    );
+  }
+
+  .copy {
+    max-width: 400px;
+    padding: 108px 32px var(--space-5);
+    gap: 12px;
+  }
+
+  .heading {
+    font-size: 34px;
+    line-height: 1.15;
+  }
+
+  .description {
+    max-width: 380px;
+    font-size: 15px;
+  }
+
+  .stack > :global(section) {
+    padding-inline: 32px;
+    max-width: 460px;
+  }
+}
+
 @media (min-width: 1280px) {
   .hero {
     height: 575px;
+    min-height: 0;
   }
 
   .photoLayer {
@@ -87,6 +148,10 @@
     inset-inline-end: 0;
     inset-block-end: 0;
     z-index: 0;
+  }
+
+  .overlay {
+    display: none;
   }
 
   .photoFrame {
@@ -112,6 +177,7 @@
 
   .copy {
     width: 510px;
+    max-width: none;
     padding: 0;
     gap: 10px;
   }

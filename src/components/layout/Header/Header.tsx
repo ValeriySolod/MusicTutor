@@ -25,16 +25,24 @@ export function Header() {
           </ul>
         </nav>
 
-        <div className={styles.desktopActions}>
-          <button type="button" className={styles.secondaryAction}>
-            Sign In
-          </button>
-          <button type="button" className={styles.primaryAction}>
-            Find a Teacher
-          </button>
-        </div>
+        <div className={styles.actionsGroup}>
+          <div className={styles.desktopActions}>
+            <button type="button" className={styles.secondaryAction}>
+              Sign In
+            </button>
+            <button type="button" className={styles.primaryAction}>
+              Find a Teacher
+            </button>
+          </div>
 
-        <MobileNav links={NAV_LINKS} />
+          <div className={styles.tabletActions}>
+            <button type="button" className={styles.primaryAction}>
+              Find a Teacher
+            </button>
+          </div>
+
+          <MobileNav links={NAV_LINKS} />
+        </div>
       </Container>
     </header>
   );
