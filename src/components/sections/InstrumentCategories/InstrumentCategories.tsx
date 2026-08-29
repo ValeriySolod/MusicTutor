@@ -110,16 +110,16 @@ export function InstrumentCategories() {
               );
             })}
             <li className={styles.moreItem}>
-              <a href="#instruments" className={styles.moreBubble}>
+              <button type="button" className={styles.moreBubble} disabled aria-disabled="true">
                 More
-              </a>
+              </button>
             </li>
           </ul>
 
           <div className={styles.actions}>
-            <a href="#instruments" className={styles.viewAll}>
+            <button type="button" className={styles.viewAll} disabled aria-disabled="true">
               View all instruments
-            </a>
+            </button>
           </div>
         </div>
       </Container>

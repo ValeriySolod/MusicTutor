@@ -38,21 +38,44 @@ export function MobileNav({ links }: MobileNavProps) {
         hidden={!isOpen}
       >
         <ul className={styles.list}>
-          {links.map((link) => (
-            <li key={link.href}>
-              <a href={link.href} className={styles.link} onClick={() => setIsOpen(false)}>
-                {link.label}
-              </a>
-            </li>
-          ))}
+          {links.map((link) =>
+            link.href === "#" ? (
+              <li key={link.label}>
+                <button
+                  type="button"
+                  className={styles.link}
+                  disabled
+                  aria-disabled="true"
+                >
+                  {link.label}
+                </button>
+              </li>
+            ) : (
+              <li key={link.label}>
+                <a href={link.href} className={styles.link} onClick={() => setIsOpen(false)}>
+                  {link.label}
+                </a>
+              </li>
+            )
+          )}
         </ul>
         <div className={styles.actions}>
-          <button type="button" className={styles.secondaryAction}>
+          <button
+            type="button"
+            className={styles.secondaryAction}
+            disabled
+            aria-disabled="true"
+            title="Sign in is not available yet"
+          >
             Sign In
           </button>
-          <button type="button" className={styles.primaryAction}>
+          <a
+            href="#teacher-search"
+            className={styles.primaryAction}
+            onClick={() => setIsOpen(false)}
+          >
             Find a Teacher
-          </button>
+          </a>
         </div>
       </nav>
     </div>

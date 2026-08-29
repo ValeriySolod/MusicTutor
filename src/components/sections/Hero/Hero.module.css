@@ -8,7 +8,10 @@
 
 .photoLayer {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 440px;
   z-index: 0;
 }
 
@@ -19,35 +22,51 @@
   aspect-ratio: auto !important;
 }
 
-.photoFrame img {
+.photoFrame :global(img) {
   object-fit: cover;
-  object-position: 78% 20%;
+  object-position: 74% 14%;
 }
 
 .overlay {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 440px;
   z-index: 1;
   pointer-events: none;
   background: linear-gradient(
     100deg,
     var(--background-cream) 0%,
-    var(--background-cream) 42%,
-    rgba(250, 242, 239, 0.75) 58%,
-    rgba(250, 242, 239, 0) 82%
+    var(--background-cream) 32%,
+    rgba(250, 242, 239, 0.82) 55%,
+    rgba(250, 242, 239, 0.5) 100%
   );
 }
 
-.stack {
+.stage {
+  position: relative;
+  z-index: 2;
+}
+
+/*
+ * The photo/overlay layers are absolutely positioned, which always paints
+ * them above static in-flow siblings regardless of z-index value. Without
+ * this, the photo band paints over any part of the search panel/stats that
+ * falls within its height, hiding that content entirely below ~1280px.
+ */
+.stage > :global(section) {
   position: relative;
   z-index: 2;
 }
 
 .copy {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  padding: 96px var(--container-padding-inline) var(--space-5);
+  gap: 24px;
+  padding: 100px var(--container-padding-inline) var(--space-5);
 }
 
 .eyebrow {
@@ -68,8 +87,8 @@
 .heading {
   color: var(--text-primary);
   max-width: 100%;
-  font-size: 24px;
-  line-height: 1.2;
+  font-size: clamp(1.65rem, 7vw, 2rem);
+  line-height: 1.15;
   letter-spacing: -0.01em;
 }
 
@@ -95,58 +114,111 @@
 
 @media (min-width: 768px) and (max-width: 1279px) {
   .hero {
-    min-height: 615px;
+    height: 706px;
+    min-height: 0;
   }
 
-  .photoFrame img {
-    object-position: 82% 18%;
+  .stage {
+    height: 100%;
+  }
+
+  .photoLayer,
+  .overlay {
+    inset: 0;
+    height: auto;
+  }
+
+  .photoFrame :global(img) {
+    object-position: 70% top;
   }
 
   .overlay {
     background: linear-gradient(
       100deg,
       var(--background-cream) 0%,
-      var(--background-cream) 48%,
-      rgba(250, 242, 239, 0.7) 58%,
+      var(--background-cream) 42%,
+      rgba(250, 242, 239, 0.62) 53%,
       rgba(250, 242, 239, 0) 78%
     );
   }
 
   .copy {
-    max-width: 400px;
-    padding: 108px 32px var(--space-5);
-    gap: 12px;
+    position: absolute;
+    inset-block-start: 81px;
+    inset-inline-start: 32px;
+    width: 390px;
+    max-width: none;
+    padding: 0;
+    gap: 0;
   }
 
   .heading {
-    font-size: 34px;
-    line-height: 1.15;
+    width: 382px;
+    max-width: 382px;
+    margin-top: 20px;
+    font-size: 36px;
+    line-height: 39px;
   }
 
   .description {
-    max-width: 380px;
+    width: 372px;
+    max-width: 358px;
+    margin-top: 16px;
     font-size: 15px;
+    line-height: 20px;
   }
 
-  .stack > :global(section) {
-    padding-inline: 32px;
-    max-width: 460px;
+  .stage > :global(section) {
+    padding-inline: 0;
+    max-width: none;
+  }
+
+  .stage :global(#teacher-search) {
+    position: absolute;
+    inset-block-start: 341px;
+    inset-inline-start: 32px;
+    width: 704px;
+    z-index: 2;
+  }
+
+  .stage :global(#stats) {
+    position: absolute;
+    inset-block-start: 489px;
+    inset-inline-start: 32px;
+    width: 548px;
+    z-index: 2;
   }
 }
 
+/*
+ * Desktop (1280px+): the Figma composition is authored on a 1440px-wide
+ * frame. `.stage` is capped at that width and centered, so every
+ * absolutely-positioned child below can use the design's literal x/y
+ * offsets directly instead of viewport-relative hacks — and the photo and
+ * copy stay locked together instead of drifting apart on very wide
+ * screens.
+ */
 @media (min-width: 1280px) {
   .hero {
-    height: 575px;
+    /* Matches the Figma "Hero Photo" frame (1440x960) exactly, which is
+       the same 3:2 ratio as the source photo — so object-fit: cover
+       below needs no extra crop and renders the full composition. */
+    height: 960px;
     min-height: 0;
+  }
+
+  .stage {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    margin-inline: auto;
   }
 
   .photoLayer {
     position: absolute;
-    width: auto;
-    inset-block-start: 40px;
-    inset-inline-start: 50%;
-    inset-inline-end: 0;
-    inset-block-end: 0;
+    inset: 0;
     z-index: 0;
   }
 
@@ -159,32 +231,26 @@
     aspect-ratio: auto !important;
   }
 
-  .photoFrame img {
+  .photoFrame :global(img) {
     object-fit: cover;
-    object-position: 35% 4%;
-  }
-
-  .stack {
-    position: absolute;
-    inset-block-start: 88px;
-    inset-inline-start: max(40px, calc((100vw - 1360px) / 2));
-    width: 625px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    z-index: 2;
+    object-position: center;
   }
 
   .copy {
+    position: absolute;
+    inset-block-start: 168px;
+    inset-inline-start: 40px;
     width: 510px;
     max-width: none;
     padding: 0;
-    gap: 10px;
+    gap: 0;
+    z-index: 2;
   }
 
   .heading {
     width: 510px;
     max-width: 510px;
+    margin-top: 48px;
     font-size: 48px;
     line-height: 52px;
     font-weight: 700;
@@ -194,8 +260,23 @@
   .description {
     width: 429px;
     max-width: 429px;
+    margin-top: 32px;
     font-size: 20px;
     line-height: 24px;
     font-weight: 500;
+  }
+
+  .stage :global(#teacher-search) {
+    position: absolute;
+    inset-block-start: 528px;
+    inset-inline-start: 40px;
+    z-index: 2;
+  }
+
+  .stage :global(#stats) {
+    position: absolute;
+    inset-block-start: 724px;
+    inset-inline-start: 40px;
+    z-index: 2;
   }
 }
