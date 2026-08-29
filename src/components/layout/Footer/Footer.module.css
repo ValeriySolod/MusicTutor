@@ -36,7 +36,8 @@
   gap: 12px;
 }
 
-.social a {
+.social a,
+.social button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,7 +68,11 @@
   gap: 14px;
 }
 
-.linkGroup a {
+.linkGroup a,
+.linkGroup button {
+  display: block;
+  width: 100%;
+  text-align: left;
   font-size: 16px;
   color: var(--text-tertiary);
 }

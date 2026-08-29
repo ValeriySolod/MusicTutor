@@ -113,6 +113,13 @@
   justify-content: space-between;
 }
 
+.favoriteButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
 .formatChip {
   display: inline-flex;
   align-items: center;

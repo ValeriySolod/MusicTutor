@@ -32,6 +32,17 @@
   border-radius: var(--radius-full);
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .toggle {
+    width: 28px;
+    height: 28px;
+  }
+
+  .toggleIcon {
+    width: 28px;
+  }
+}
+
 .panel {
   position: absolute;
   inset-inline: 0;
@@ -56,6 +67,8 @@
 
 .link {
   display: block;
+  width: 100%;
+  text-align: left;
   font-weight: 600;
   padding-block: var(--space-1);
 }

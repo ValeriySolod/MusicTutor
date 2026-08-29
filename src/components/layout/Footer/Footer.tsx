@@ -30,13 +30,26 @@ export function Footer() {
               Connecting students with amazing music teachers.
             </p>
             <ul className={styles.social}>
-              {SOCIAL_LINKS.map((social) => (
-                <li key={social.icon}>
-                  <a href={social.href} aria-label={social.label}>
-                    <Icon name={social.icon} size={16} alt="" />
-                  </a>
-                </li>
-              ))}
+              {SOCIAL_LINKS.map((social) =>
+                social.href === "#" ? (
+                  <li key={social.icon}>
+                    <button
+                      type="button"
+                      aria-label={social.label}
+                      disabled
+                      aria-disabled="true"
+                    >
+                      <Icon name={social.icon} size={16} alt="" />
+                    </button>
+                  </li>
+                ) : (
+                  <li key={social.icon}>
+                    <a href={social.href} aria-label={social.label}>
+                      <Icon name={social.icon} size={16} alt="" />
+                    </a>
+                  </li>
+                )
+              )}
             </ul>
           </div>
 
@@ -45,11 +58,19 @@ export function Footer() {
               <div key={group.title} className={styles.linkGroup}>
                 <h3 className={styles.linkGroupTitle}>{group.title}</h3>
                 <ul>
-                  {group.links.map((link) => (
-                    <li key={link.label}>
-                      <a href={link.href}>{link.label}</a>
-                    </li>
-                  ))}
+                  {group.links.map((link) =>
+                    link.href === "#" ? (
+                      <li key={link.label}>
+                        <button type="button" disabled aria-disabled="true">
+                          {link.label}
+                        </button>
+                      </li>
+                    ) : (
+                      <li key={link.label}>
+                        <a href={link.href}>{link.label}</a>
+                      </li>
+                    )
+                  )}
                 </ul>
               </div>
             ))}

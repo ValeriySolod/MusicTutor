@@ -7,22 +7,22 @@ import styles from "./Hero.module.css";
 export function Hero() {
   return (
     <section id="hero" className={styles.hero} aria-labelledby="hero-heading">
-      <div className={styles.photoLayer}>
-        <PhotoFrame
-          src="/assets/photos/1d9db912669ef67c1a58f7f62389bee4cc9868d2.png"
-          alt="A smiling music student playing acoustic guitar at home"
-          width={1280}
-          height={853}
-          priority
-          sizes="(min-width: 1280px) 50vw, 100vw"
-          cropAspectRatio="3 / 2"
-          className={styles.photoFrame}
-        />
-      </div>
+      <div className={styles.stage}>
+        <div className={styles.photoLayer}>
+          <PhotoFrame
+            src="/assets/photos/1d9db912669ef67c1a58f7f62389bee4cc9868d2.png"
+            alt="A smiling music student playing acoustic guitar at home"
+            width={1280}
+            height={853}
+            priority
+            sizes="100vw"
+            cropAspectRatio="3 / 2"
+            className={styles.photoFrame}
+          />
+        </div>
 
-      <div className={styles.overlay} aria-hidden="true" />
+        <div className={styles.overlay} aria-hidden="true" />
 
-      <div className={styles.stack}>
         <div className={styles.copy}>
           <span className={styles.eyebrow}>
             <Icon name="sparkles" size={16} alt="" color="var(--accent-gold-star)" />

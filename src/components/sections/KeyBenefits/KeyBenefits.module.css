@@ -1,6 +1,7 @@
 .section {
   position: relative;
   z-index: 3;
+  background-color: var(--background-cream);
   padding-block: var(--space-5) var(--space-10);
 }
 
@@ -11,7 +12,7 @@
 }
 
 .card {
-  padding: 22px;
+  padding: 24px;
   border: 1px solid var(--border-default);
   border-radius: var(--radius-sm);
   background-color: var(--background-card);
@@ -20,7 +21,7 @@
 
 .grid {
   display: grid;
-  gap: 22px;
+  gap: 24px;
   grid-template-columns: 1fr;
 }
 
@@ -47,7 +48,7 @@
 }
 
 .itemDescription {
-  max-width: 205px;
+  max-width: 240px;
   color: var(--text-secondary);
   font-weight: 400;
   font-size: 11px;
@@ -55,18 +56,57 @@
 }
 
 @media (min-width: 768px) {
+  .section {
+    padding-block: 0 48px;
+  }
+
+  .frame {
+    padding-inline: 32px;
+  }
+
+  .card {
+    min-height: 338px;
+    padding: 32px;
+  }
+
   .grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 32px 80px;
   }
 
   .item {
     align-items: flex-start;
     text-align: left;
   }
+
+  .iconWrap {
+    width: 48px;
+    height: 48px;
+  }
+
+  .itemTitle {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .itemDescription {
+    max-width: 280px;
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 
 @media (min-width: 1024px) {
+  .section {
+    padding-block: var(--space-5) var(--space-10);
+  }
+
+  .frame {
+    padding-inline: var(--container-padding-inline);
+  }
+
   .card {
+    min-height: 0;
     padding: 24px 30px;
   }
 
@@ -78,7 +118,9 @@
 
 @media (min-width: 1280px) {
   .section {
-    margin-block-start: -70px;
+    /* Hero is now 960px tall (matching its Figma frame); the Features
+       Card sits at Figma y=798, so pull this section up by 960 - 798. */
+    margin-block-start: -162px;
     padding-block-start: 0;
     padding-block-end: 28px;
   }
@@ -91,6 +133,7 @@
   .card {
     height: 185px;
     padding: 24px 32px;
+    border-radius: 10px;
     box-shadow: 0 14px 32px -26px rgb(31 21 51 / 0.3);
   }
 
