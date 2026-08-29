@@ -20,6 +20,8 @@ export function Hero() {
         />
       </div>
 
+      <div className={styles.overlay} aria-hidden="true" />
+
       <div className={styles.stack}>
         <div className={styles.copy}>
           <span className={styles.eyebrow}>
