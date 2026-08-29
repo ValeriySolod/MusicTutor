@@ -143,6 +143,11 @@ ol {
   --accent-blush-pink: #fcdddb;
   --accent-coral: #d88179;
   --accent-gold-star: #edb748;
+  --accent-green: #58ba4d;
+  --accent-green-tint: #dcf7da;
+  --accent-blue: #2a73a1;
+  --accent-blue-tint: #d0e9ed;
+  --accent-warm-tint: #fbede0;
 
   --background-white: #ffffff;
   --background-card: #fdfcfa;
