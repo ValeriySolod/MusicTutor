@@ -208,6 +208,16 @@
     aspect-ratio: 173 / 300 !important;
   }
 
+  .viewAll {
+    width: 264px;
+    height: 44px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--brand-purple);
+    color: var(--color-text-on-primary);
+    opacity: 1;
+  }
+
   .textBlock {
     height: 48px;
     padding: 0;
