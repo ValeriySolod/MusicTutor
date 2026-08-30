@@ -30,7 +30,7 @@ export function FeaturedTeachers() {
       className={styles.section}
       aria-labelledby="featured-teachers-heading"
     >
-      <Container>
+      <Container className={styles.container}>
         <div className={styles.header}>
           <span className={styles.eyebrow}>
             <Icon name="sparkles" size={20} alt="" color="var(--accent-gold-star)" />

@@ -2,6 +2,10 @@
   padding-block: var(--space-10);
 }
 
+.container.container {
+  max-width: 1432px;
+}
+
 .header {
   max-width: 60ch;
   display: flex;
@@ -49,6 +53,16 @@
 
 .photo {
   border-radius: 0;
+}
+
+.card:nth-child(1) .photo :global(img) {
+  object-position: center;
+  transform: scaleX(-1);
+}
+
+.card:nth-child(2) .photo :global(img),
+.card:nth-child(4) .photo :global(img) {
+  object-position: center top;
 }
 
 .ratingBadge {
@@ -143,12 +157,20 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 32px;
-  border-radius: var(--radius-sm);
+  width: 264px;
+  height: 44px;
+  padding: 10px;
+  border-radius: 10px;
   border: 1px solid var(--brand-purple);
-  color: var(--brand-purple);
+  background-color: var(--brand-purple);
+  color: var(--color-text-on-primary);
   font-weight: 500;
   font-size: 16px;
+  opacity: 1;
+}
+
+.viewAll:disabled {
+  opacity: 1;
 }
 
 @media (min-width: 640px) {
@@ -184,16 +206,6 @@
     object-fit: cover;
   }
 
-  .card:nth-child(1) .photo :global(img) {
-    object-position: center;
-    transform: scaleX(-1);
-  }
-
-  .card:nth-child(2) .photo :global(img),
-  .card:nth-child(4) .photo :global(img) {
-    object-position: center 18%;
-  }
-
   .viewAll {
     width: 264px;
     height: 44px;
@@ -207,6 +219,7 @@
 
 @media (min-width: 1024px) {
   .grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 316px));
+    justify-content: center;
   }
 }

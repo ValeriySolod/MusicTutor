@@ -135,6 +135,7 @@ ol {
   --text-secondary: rgba(0, 0, 0, 0.6);
   --text-tertiary: rgba(0, 0, 0, 0.55);
   --text-caption: rgba(0, 0, 0, 0.45);
+  --text-inverse: #faf2ef;
   --text-strong: rgba(0, 0, 0, 0.7);
   --text-placeholder: rgba(0, 0, 0, 0.4);
 
@@ -163,6 +164,8 @@ ol {
   --border-subtle: #e5e5e5;
 
   --icon-gray: #7c7c7c;
+  --decor-wave-line: #c7b8c2;
+  --decor-note-lavender: rgba(219, 208, 237, 0.5);
 }
 
 /* ------------------------------------------------------------------ */

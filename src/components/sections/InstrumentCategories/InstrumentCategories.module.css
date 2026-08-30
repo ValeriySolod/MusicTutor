@@ -182,12 +182,19 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 22px;
-  border-radius: var(--radius-sm);
+  width: 264px;
+  height: 44px;
+  padding: 10px;
+  border-radius: 10px;
   background-color: var(--brand-purple);
-  color: var(--background-white);
+  color: var(--color-text-on-primary);
   font-weight: 600;
   font-size: 15px;
+  opacity: 1;
+}
+
+.viewAll:disabled {
+  opacity: 1;
 }
 
 /* Mobile: compact image tiles — the name/tagline are visually hidden
