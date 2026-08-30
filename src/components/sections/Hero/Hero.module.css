@@ -190,19 +190,8 @@
   }
 }
 
-/*
- * Desktop (1280px+): the Figma composition is authored on a 1440px-wide
- * frame. `.stage` is capped at that width and centered, so every
- * absolutely-positioned child below can use the design's literal x/y
- * offsets directly instead of viewport-relative hacks — and the photo and
- * copy stay locked together instead of drifting apart on very wide
- * screens.
- */
 @media (min-width: 1280px) {
   .hero {
-    /* Matches the Figma "Hero Photo" frame (1440x960) exactly, which is
-       the same 3:2 ratio as the source photo — so object-fit: cover
-       below needs no extra crop and renders the full composition. */
     height: 960px;
     min-height: 0;
   }
@@ -219,6 +208,7 @@
   .photoLayer {
     position: absolute;
     inset: 0;
+    height: auto;
     z-index: 0;
   }
 
@@ -238,8 +228,8 @@
 
   .copy {
     position: absolute;
-    inset-block-start: 168px;
-    inset-inline-start: 40px;
+    inset-block-start: 137px;
+    inset-inline-start: 50px;
     width: 510px;
     max-width: none;
     padding: 0;
@@ -250,33 +240,33 @@
   .heading {
     width: 510px;
     max-width: 510px;
-    margin-top: 48px;
-    font-size: 48px;
-    line-height: 52px;
+    margin-top: 24px;
+    font-size: 36px;
+    line-height: 40px;
     font-weight: 700;
     letter-spacing: -0.02em;
   }
 
   .description {
-    width: 429px;
-    max-width: 429px;
-    margin-top: 32px;
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 500;
+    width: 390px;
+    max-width: 390px;
+    margin-top: 16px;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 400;
   }
 
   .stage :global(#teacher-search) {
     position: absolute;
-    inset-block-start: 528px;
-    inset-inline-start: 40px;
+    inset-block-start: 529px;
+    inset-inline-start: 50px;
     z-index: 2;
   }
 
   .stage :global(#stats) {
     position: absolute;
-    inset-block-start: 724px;
-    inset-inline-start: 40px;
+    inset-block-start: 716px;
+    inset-inline-start: 50px;
     z-index: 2;
   }
 }
