@@ -99,6 +99,42 @@
   display: none;
 }
 
+@media (min-width: 640px) and (max-width: 1023px) {
+  .section {
+    min-height: 451px;
+    padding-block: 56px 64px;
+  }
+
+  .header {
+    gap: 16px;
+  }
+
+  .header h2 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .grid {
+    margin-top: 40px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .step {
+    flex: 1;
+  }
+
+  .connector {
+    display: block;
+    position: absolute;
+    top: 28px;
+    left: calc(50% + 72px);
+    width: calc(100% - 120px);
+    border-top: 1.5px dashed var(--border-default);
+  }
+}
+
 @media (min-width: 1024px) {
   .grid {
     flex-direction: row;
