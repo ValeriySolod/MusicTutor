@@ -70,6 +70,57 @@
   }
 }
 
+@media (min-width: 640px) and (max-width: 1023px) {
+  .section {
+    padding-block: 8px 72px;
+  }
+
+  .card {
+    height: 322px;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .text {
+    z-index: 2;
+    flex: 1;
+    justify-content: center;
+    padding: 32px 0 32px 40px;
+  }
+
+  .heading {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .subheading {
+    max-width: 280px;
+    font-size: 18px;
+  }
+
+  .photoWrap {
+    position: relative;
+    flex: 0 0 352px;
+  }
+
+  .photoWrap::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+      to right,
+      var(--brand-soft-lavender) 0%,
+      rgb(231 224 244 / 0) 58%
+    );
+  }
+
+  .photo {
+    height: 100%;
+    aspect-ratio: auto !important;
+  }
+}
+
 @media (min-width: 1024px) {
   .card {
     flex-direction: row;

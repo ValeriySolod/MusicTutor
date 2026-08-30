@@ -155,6 +155,49 @@
   }
 }
 
+@media (min-width: 640px) and (max-width: 1023px) {
+  .footer {
+    min-height: 459px;
+    padding: 48px 32px 32px;
+  }
+
+  .container.container {
+    padding-inline: 0;
+  }
+
+  .top {
+    grid-template-columns: 240px repeat(3, minmax(0, 1fr));
+    column-gap: 32px;
+    row-gap: 32px;
+  }
+
+  .brandBlock {
+    gap: 16px;
+  }
+
+  .linkGroups {
+    display: contents;
+  }
+
+  .newsletter {
+    grid-column: 1 / span 2;
+  }
+
+  .subscribeForm {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 116px;
+  }
+
+  .divider {
+    margin-top: 32px;
+  }
+
+  .bottom {
+    margin-top: 20px;
+    font-size: 12px;
+  }
+}
+
 @media (max-width: 639px) {
   .footer {
     padding-block: 28px 24px;

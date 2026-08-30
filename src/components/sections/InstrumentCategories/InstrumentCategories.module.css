@@ -265,6 +265,99 @@
   }
 }
 
+@media (min-width: 640px) and (max-width: 1023px) {
+  .wave {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleY(2.75);
+    transform-origin: top center;
+    width: 142%;
+    max-width: 142%;
+    height: auto;
+    opacity: 0.5;
+  }
+
+  .noteOne {
+    top: 48%;
+    left: 63%;
+  }
+
+  .noteTwo {
+    top: 75%;
+    left: 23%;
+  }
+
+  .noteThree {
+    top: 84%;
+    left: 73%;
+  }
+
+  .inner {
+    padding: 40px 32px 64px;
+  }
+
+  .header {
+    width: 516px;
+    max-width: 516px;
+    gap: 24px;
+  }
+
+  .headingBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .header h2 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .header p {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .grid {
+    margin-top: 36px;
+    width: 672px;
+    margin-inline: auto;
+    grid-template-columns: repeat(3, 208px);
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .card {
+    width: 208px;
+    height: 418px;
+  }
+
+  .name {
+    font-size: 20px;
+  }
+
+  .tagline {
+    font-size: 16px;
+  }
+
+  .moreItem {
+    width: 208px;
+    height: 418px;
+  }
+
+  .moreBubble {
+    width: 184px;
+    height: 180px;
+    aspect-ratio: auto;
+    font-size: 32px;
+  }
+
+  .actions {
+    margin-top: 36px;
+  }
+}
+
 @media (min-width: 1024px) {
   .inner {
     padding-top: var(--space-8);
