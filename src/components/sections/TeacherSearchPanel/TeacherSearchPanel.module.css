@@ -141,26 +141,26 @@
 @media (min-width: 1280px) {
   .section {
     padding: 0;
-    width: 664px;
+    width: 652px;
   }
 
   .panel {
-    width: 664px;
-    min-height: 133px;
-    padding: 20px;
+    width: 652px;
+    min-height: 82px;
+    padding: 12px 14px;
     box-shadow: 0 12px 32px 0 rgb(103 87 185 / 0.12);
   }
 
   .heading {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 15px;
   }
 
   .row {
     flex-direction: row;
     align-items: stretch;
-    gap: 12px;
-    margin-top: 13px;
+    gap: 10px;
+    margin-top: 10px;
   }
 
   .field {
@@ -172,14 +172,14 @@
   }
 
   .fieldValue {
-    height: 60px;
-    padding: 8px 14px;
+    height: 44px;
+    padding: 7px 12px;
   }
 
   .submit {
-    height: 60px;
-    padding: 0 20px;
-    font-size: 18px;
+    height: 44px;
+    padding: 0 18px;
+    font-size: 14px;
     border-radius: var(--radius-sm);
   }
 }

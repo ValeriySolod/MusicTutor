@@ -118,11 +118,15 @@
 
 @media (min-width: 1280px) {
   .section {
-    /* Hero is now 960px tall (matching its Figma frame); the Features
-       Card sits at Figma y=798, so pull this section up by 960 - 798. */
+    background: linear-gradient(
+      to bottom,
+      transparent 45%,
+      var(--background-cream) 88%,
+      var(--background-cream) 100%
+    );
     margin-block-start: -162px;
     padding-block-start: 0;
-    padding-block-end: 28px;
+    padding-block-end: 0;
   }
 
   .frame {
