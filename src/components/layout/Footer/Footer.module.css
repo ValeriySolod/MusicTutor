@@ -4,6 +4,10 @@
   padding-block: var(--space-10) var(--space-6);
 }
 
+.container.container {
+  max-width: 1296px;
+}
+
 .top {
   display: grid;
   gap: var(--space-8);
@@ -74,6 +78,7 @@
   width: 100%;
   text-align: left;
   font-size: 16px;
+  line-height: 1.2;
   color: var(--text-tertiary);
 }
 
@@ -119,7 +124,7 @@
   padding: 0 20px;
   border-radius: var(--radius-sm);
   background-color: var(--brand-purple);
-  color: var(--background-cream);
+  color: var(--text-inverse);
   font-size: 16px;
   font-weight: 500;
 }

@@ -19,7 +19,7 @@ export function Footer() {
 
   return (
     <footer className={styles.footer}>
-      <Container>
+      <Container className={styles.container}>
         <div className={styles.top}>
           <div className={styles.brandBlock}>
             <a href="#hero" className={styles.brand}>
