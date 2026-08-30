@@ -26,6 +26,16 @@ export function InstrumentCategories() {
           alt=""
           className={styles.wave}
         />
+        {/* eslint-disable @next/next/no-img-element -- decorative tablet background art, not content photos */}
+        {["24", "26", "28", "25", "27", "29"].map((wave) => (
+          <img
+            key={wave}
+            src={`/assets/backgrounds/music-wave-${wave}.svg`}
+            alt=""
+            className={`${styles.tabletWave} ${styles[`tabletWave${wave}`]}`}
+          />
+        ))}
+        {/* eslint-enable @next/next/no-img-element */}
         <Icon
           name="music-note-outline"
           size={95}
@@ -56,6 +66,9 @@ export function InstrumentCategories() {
           color="var(--brand-lavender)"
           className={`${styles.note} ${styles.noteThree}`}
         />
+        <span className={`${styles.accentLine} ${styles.accentHeading}`} />
+        <span className={`${styles.accentLine} ${styles.accentActionTop}`} />
+        <span className={`${styles.accentLine} ${styles.accentActionBottom}`} />
       </div>
 
       <Container className={styles.container}>
