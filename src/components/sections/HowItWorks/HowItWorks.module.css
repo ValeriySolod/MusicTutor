@@ -136,6 +136,10 @@
 }
 
 @media (min-width: 1024px) {
+  .header h2 {
+    font-size: 36px;
+  }
+
   .grid {
     flex-direction: row;
     align-items: flex-start;

@@ -80,7 +80,7 @@
   border: 1px solid var(--border-default);
   background-color: var(--background-card);
   color: var(--text-secondary);
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -188,6 +188,10 @@
     width: 548px;
     z-index: 2;
   }
+
+  .eyebrow {
+    font-size: 18px;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -241,8 +245,8 @@
     width: 510px;
     max-width: 510px;
     margin-top: 24px;
-    font-size: 36px;
-    line-height: 40px;
+    font-size: 48px;
+    line-height: 52px;
     font-weight: 700;
     letter-spacing: -0.02em;
   }
@@ -251,9 +255,13 @@
     width: 390px;
     max-width: 390px;
     margin-top: 16px;
-    font-size: 15px;
-    line-height: 18px;
-    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: 500;
+  }
+
+  .eyebrow {
+    font-size: 20px;
   }
 
   .stage :global(#teacher-search) {

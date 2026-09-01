@@ -148,18 +148,25 @@
   }
 
   .item {
-    gap: 6px;
+    gap: 8px;
     padding-inline-end: 26px;
   }
 
+  .iconWrap > * {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
   .itemTitle {
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
   }
 
   .itemDescription {
     max-width: 226px;
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
   }
 }

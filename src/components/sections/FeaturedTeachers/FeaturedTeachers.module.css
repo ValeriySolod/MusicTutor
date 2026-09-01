@@ -199,7 +199,7 @@
   }
 
   .photo {
-    aspect-ratio: 374 / 302 !important;
+    aspect-ratio: 374 / 302 ;
   }
 
   .photo :global(img) {
@@ -221,5 +221,9 @@
   .grid {
     grid-template-columns: repeat(4, minmax(0, 316px));
     justify-content: center;
+  }
+
+  .header h2 {
+    font-size: 36px;
   }
 }

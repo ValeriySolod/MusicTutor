@@ -13,10 +13,14 @@ export function FinalCta() {
         <div className={styles.card}>
           <div className={styles.text}>
             <h2 id="final-cta-heading" className={styles.heading}>
-              Ready to start your musical journey?
+              Ready to start your
+              <br />
+              musical journey?
             </h2>
             <p className={styles.subheading}>
-              Find a teacher who fits your goals, schedule and budget.
+              Find a teacher who fits your goals,
+              <br />
+              schedule and budget.
             </p>
             <a href="#teacher-search" className={styles.primaryCta}>
               Find a Teacher

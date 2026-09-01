@@ -4,7 +4,7 @@ import styles from "./PlatformStats.module.css";
 
 const STAT_ICON_STYLES: Record<string, { color: string; background: string }> = {
   teachers: { color: "#6757b9", background: "#dbd0ed" },
-  rating: { color: "#edb748", background: "#fbeee0" },
+  rating: { color: "#edb748", background: "#fbede0" },
   students: { color: "#d88179", background: "#fcdddb" },
 };
 
@@ -29,7 +29,7 @@ export function PlatformStats() {
                 className={styles.iconWrap}
                 style={{ backgroundColor: iconStyle.background }}
               >
-                <Icon name={stat.icon} size={18} alt="" color={iconStyle.color} />
+                <Icon name={stat.icon} size={28} alt="" color={iconStyle.color} />
               </span>
               <dt className={styles.label}>{stat.label}</dt>
               <dd className={styles.value}>{stat.value}</dd>
