@@ -49,7 +49,7 @@ export function TeacherSearchPanel() {
           </div>
 
           <button type="button" className={styles.submit}>
-            <Icon name="search" size={24} alt="" color="#ffffff" />
+            <Icon name="search" size={24} alt="" color="var(--text-inverse)" />
             Find a Teacher
           </button>
         </div>

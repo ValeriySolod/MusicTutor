@@ -25,7 +25,7 @@
   border: 1px solid var(--border-default);
   background-color: var(--background-card);
   color: var(--text-secondary);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -114,6 +114,10 @@
     line-height: 1.2;
   }
 
+  .eyebrow {
+    font-size: 18px;
+  }
+
   .grid {
     margin-top: 40px;
     flex-direction: row;
@@ -140,6 +144,10 @@
     font-size: 36px;
   }
 
+  .eyebrow {
+    font-size: 20px;
+  }
+
   .grid {
     flex-direction: row;
     align-items: flex-start;
@@ -158,5 +166,16 @@
     left: calc(50% + 92px);
     width: calc(100% - 92px);
     border-top: 1.5px dashed var(--border-default);
+  }
+}
+
+@media (min-width: 1280px) {
+  .section {
+    padding-block: 80px;
+  }
+
+  .container.container {
+    max-width: 1440px;
+    padding-inline: 120px;
   }
 }

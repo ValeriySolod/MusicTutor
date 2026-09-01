@@ -56,7 +56,7 @@ export function FeaturedTeachers() {
                     cropAspectRatio="316 / 256"
                   />
                   <span className={styles.ratingBadge}>
-                    <Icon name="star-rounded" size={20} alt="" color="var(--accent-gold-star)" />
+                    <Icon name="star-rounded" size={24} alt="" color="var(--accent-gold-star)" />
                     {teacher.rating}
                   </span>
                 </div>
@@ -65,7 +65,7 @@ export function FeaturedTeachers() {
                   <div className={styles.nameRole}>
                     <h3 className={styles.name}>{teacher.name}</h3>
                     <p className={styles.role}>
-                      <Icon name={teacher.roleIcon} size={20} alt="" color="var(--icon-gray)" />
+                      <Icon name={teacher.roleIcon} size={24} alt="" color="var(--icon-gray)" />
                       {teacher.role}
                     </p>
                   </div>

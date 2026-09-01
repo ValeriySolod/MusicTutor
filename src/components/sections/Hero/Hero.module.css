@@ -81,13 +81,13 @@
   background-color: var(--background-card);
   color: var(--text-secondary);
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .heading {
   color: var(--text-primary);
   max-width: 100%;
-  font-size: clamp(1.65rem, 7vw, 2rem);
+  font-size: 34px;
   line-height: 1.15;
   letter-spacing: -0.01em;
 }
@@ -103,7 +103,7 @@
 
 .description {
   max-width: 100%;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.35;
   color: var(--text-secondary);
 }
@@ -146,26 +146,26 @@
     position: absolute;
     inset-block-start: 81px;
     inset-inline-start: 32px;
-    width: 390px;
+    width: 510px;
     max-width: none;
     padding: 0;
     gap: 0;
   }
 
   .heading {
-    width: 382px;
-    max-width: 382px;
+    width: 502px;
+    max-width: 502px;
     margin-top: 20px;
-    font-size: 36px;
-    line-height: 39px;
+    font-size: 42px;
+    line-height: 46px;
   }
 
   .description {
     width: 372px;
     max-width: 358px;
     margin-top: 16px;
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 18px;
+    line-height: 24px;
   }
 
   .stage > :global(section) {
@@ -232,8 +232,8 @@
 
   .copy {
     position: absolute;
-    inset-block-start: 137px;
-    inset-inline-start: 50px;
+    inset-block-start: 168px;
+    inset-inline-start: 40px;
     width: 510px;
     max-width: none;
     padding: 0;
@@ -244,7 +244,7 @@
   .heading {
     width: 510px;
     max-width: 510px;
-    margin-top: 24px;
+    margin-top: 48px;
     font-size: 48px;
     line-height: 52px;
     font-weight: 700;
@@ -254,7 +254,7 @@
   .description {
     width: 390px;
     max-width: 390px;
-    margin-top: 16px;
+    margin-top: 32px;
     font-size: 20px;
     line-height: 27px;
     font-weight: 500;
@@ -267,14 +267,14 @@
   .stage :global(#teacher-search) {
     position: absolute;
     inset-block-start: 529px;
-    inset-inline-start: 50px;
+    inset-inline-start: 40px;
     z-index: 2;
   }
 
   .stage :global(#stats) {
     position: absolute;
     inset-block-start: 716px;
-    inset-inline-start: 50px;
+    inset-inline-start: 40px;
     z-index: 2;
   }
 }

@@ -10,7 +10,7 @@ export function WhyMusicTutor() {
       className={styles.section}
       aria-labelledby="why-musictutor-heading"
     >
-      <Container className={styles.inner}>
+      <Container className={`${styles.container} ${styles.inner}`}>
         <div className={styles.header}>
           <span className={styles.eyebrow}>
             <Icon name="sparkles" size={20} alt="" color="var(--accent-gold-star)" />

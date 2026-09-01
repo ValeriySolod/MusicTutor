@@ -20,6 +20,11 @@
   color: var(--text-primary);
 }
 
+.header p {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
 .eyebrow {
   align-self: center;
   display: inline-flex;
@@ -30,7 +35,7 @@
   border: 1px solid var(--border-default);
   background-color: var(--background-card);
   color: var(--text-secondary);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -84,7 +89,6 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
 }
 
 .nameRole {
@@ -109,6 +113,7 @@
 }
 
 .description {
+  margin-top: 12px;
   color: var(--text-secondary);
   font-size: 16px;
   font-weight: 500;
@@ -116,12 +121,14 @@
 }
 
 .price {
+  margin-top: 24px;
   color: var(--text-primary);
   font-size: 20px;
   font-weight: 600;
 }
 
 .footer {
+  margin-top: 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -163,9 +170,9 @@
   border-radius: 10px;
   border: 1px solid var(--brand-purple);
   background-color: var(--brand-purple);
-  color: var(--color-text-on-primary);
+  color: var(--text-inverse);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 24px;
   opacity: 1;
 }
 
@@ -213,14 +220,30 @@
     border-radius: 10px;
     border-color: var(--brand-purple);
     background-color: var(--brand-purple);
-    color: var(--color-text-on-primary);
+    color: var(--text-inverse);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .eyebrow {
+    font-size: 18px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 316px);
+    justify-content: center;
   }
 }
 
 @media (min-width: 1024px) {
+  .eyebrow {
+    font-size: 20px;
+  }
+
   .grid {
     grid-template-columns: repeat(4, minmax(0, 316px));
-    justify-content: center;
+    gap: 0;
+    justify-content: space-between;
   }
 
   .header h2 {

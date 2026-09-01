@@ -10,7 +10,7 @@ export function HowItWorks() {
       className={styles.section}
       aria-labelledby="how-it-works-heading"
     >
-      <Container>
+      <Container className={styles.container}>
         <div className={styles.header}>
           <span className={styles.eyebrow}>
             <Icon name="sparkles" size={20} alt="" color="var(--accent-gold-star)" />

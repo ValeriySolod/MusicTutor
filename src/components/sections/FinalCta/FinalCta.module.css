@@ -5,7 +5,7 @@
 .card {
   display: flex;
   flex-direction: column;
-  border-radius: 24px;
+  border-radius: 20px;
   background-color: var(--brand-soft-lavender);
   overflow: hidden;
 }
@@ -37,7 +37,7 @@
   justify-content: center;
   height: 48px;
   padding: 0 32px;
-  border-radius: var(--radius-sm);
+  border-radius: 10px;
   background-color: var(--brand-purple);
   color: var(--background-cream);
   font-weight: 500;
@@ -53,6 +53,14 @@
 }
 
 @media (max-width: 639px) {
+  .text {
+    padding: 36px 28px 8px;
+  }
+
+  .photo {
+    aspect-ratio: 358 / 210 !important;
+  }
+
   .heading {
     font-size: 26px;
     max-width: none;
@@ -93,6 +101,7 @@
   }
 
   .card {
+    border-radius: 24px;
     height: 322px;
     flex-direction: row;
     align-items: stretch;
@@ -140,7 +149,12 @@
 }
 
 @media (min-width: 1024px) {
+  .section {
+    padding-block-end: 96px;
+  }
+
   .card {
+    border-radius: 24px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -148,11 +162,15 @@
 
   .text {
     flex: 1;
-    padding: var(--space-10) var(--space-8) var(--space-10) 64px;
+    padding: var(--space-10) 32px var(--space-10) 64px;
   }
 
   .heading {
     font-size: 36px;
+  }
+
+  .primaryCta {
+    font-size: 24px;
   }
 
   .photoWrap {
