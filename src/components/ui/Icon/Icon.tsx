@@ -17,10 +17,10 @@ export function Icon({ name, size = 24, alt = "", className, color }: IconProps)
         aria-label={alt || undefined}
         aria-hidden={alt === "" ? true : undefined}
         style={{
-          display: "inline-block",
+          display: "var(--icon-display, inline-block)",
           flexShrink: 0,
-          width: size,
-          height: size,
+          width: `var(--icon-size, ${size}px)`,
+          height: `var(--icon-size, ${size}px)`,
           backgroundColor: color,
           WebkitMaskImage: maskImage,
           maskImage,

@@ -9,7 +9,7 @@ export function FinalCta() {
       className={styles.section}
       aria-labelledby="final-cta-heading"
     >
-      <Container>
+      <Container className={styles.container}>
         <div className={styles.card}>
           <div className={styles.text}>
             <h2 id="final-cta-heading" className={styles.heading}>

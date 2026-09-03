@@ -11,9 +11,9 @@ export const FEATURED_TEACHERS: TeacherItem[] = [
     price: "$25 / lesson",
     format: "Online",
     isFavorite: false,
-    photo: "/assets/photos/83fe7683ad3d8a3307186bfa383e4fbfb3f30202.png",
-    photoWidth: 736,
-    photoHeight: 1104,
+    photo: "/assets/photos/fb8e74eaf80e19016be45e36c76917904eb43c52.png",
+    photoWidth: 768,
+    photoHeight: 961,
   },
   {
     id: "lily-chen",
