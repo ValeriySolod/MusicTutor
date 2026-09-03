@@ -30,6 +30,10 @@
   display: none;
 }
 
+.tabletNote {
+  --icon-display: none;
+}
+
 .note {
   position: absolute;
   opacity: 0.55;
@@ -282,62 +286,56 @@
     left: 50%;
     display: block;
     max-width: none;
-    height: auto;
+    object-fit: fill;
     opacity: 0.86;
-    transform: translateX(-50%);
+    transform-origin: center;
     filter:
       drop-shadow(0 0 0 #c6b6ec)
       drop-shadow(0 1px 0 rgba(198, 182, 236, 0.7));
   }
 
-  .tabletWave24 {
-    top: 2px;
-    width: 930px;
+  .tabletWaveTop {
+    top: -20px;
+    width: 1095.67px;
+    height: 280.289px;
+    transform: translateX(-50%) rotate(-6deg);
   }
 
-  .tabletWave26 {
-    top: 68px;
-    width: 950px;
+  .tabletWaveMiddle {
+    top: 420px;
+    width: 1171.832px;
+    height: 275.933px;
+    transform: translateX(-50%) rotate(-14.254deg);
   }
 
-  .tabletWave28 {
-    top: 250px;
-    width: 950px;
-  }
-
-  .tabletWave25 {
-    top: 590px;
-    width: 960px;
-  }
-
-  .tabletWave27 {
-    top: 640px;
-    width: 970px;
-  }
-
-  .tabletWave29 {
-    top: 708px;
-    width: 980px;
+  .tabletWaveBottom {
+    top: 900px;
+    width: 1102.247px;
+    height: 243.742px;
+    transform: translateX(-50%) rotate(155.398deg);
   }
 
   .noteOne {
-    top: 50%;
-    left: 74%;
-    --icon-size: 92px;
+    top: 57%;
+    left: 73%;
+    --icon-size: 71.114px;
+    transform: rotate(-13.329deg);
     opacity: 0.36;
   }
 
   .noteTwo {
-    top: 83%;
-    left: 6%;
-    --icon-size: 88px;
+    top: 94%;
+    left: 8%;
+    --icon-size: 71.114px;
+    transform: rotate(-13.329deg);
     opacity: 0.36;
   }
 
   .noteThree {
-    top: 76%;
-    left: 79%;
-    --icon-size: 112px;
+    top: 59%;
+    left: 82%;
+    --icon-size: 71.114px;
+    transform: rotate(-13.329deg);
     opacity: 0.36;
   }
 
@@ -348,13 +346,39 @@
   }
 
   .noteTopOne {
-    top: 2%;
+    top: 2.5%;
     left: 66%;
+    --icon-size: 71.114px;
+    transform: rotate(-13.329deg);
   }
 
   .noteTopTwo {
-    top: 3%;
+    top: 4%;
     left: 84%;
+    --icon-size: 71.114px;
+    transform: rotate(-13.329deg);
+  }
+
+  .tabletNote {
+    --icon-display: block;
+    --icon-size: 71.114px;
+    opacity: 0.36;
+    transform: rotate(-13.329deg);
+  }
+
+  .tabletNoteTwo {
+    top: 91%;
+    left: 20%;
+  }
+
+  .tabletNoteThree {
+    top: 87%;
+    left: 78%;
+  }
+
+  .tabletNoteFour {
+    top: 86%;
+    left: 88%;
   }
 
   .accentHeading,
