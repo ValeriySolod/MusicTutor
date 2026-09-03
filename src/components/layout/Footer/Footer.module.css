@@ -93,17 +93,19 @@
 .newsletterDescription {
   margin-top: 14px;
   color: var(--text-tertiary);
+  font-family: Inter;
   font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
-
 .subscribeForm {
   margin-top: 12px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 180px 118px;
   gap: 8px;
 }
-
 .subscribeInput {
-  flex: 1;
   min-width: 0;
   height: 44px;
   padding: 0 16px;
@@ -181,11 +183,6 @@
 
   .newsletter {
     grid-column: 1 / span 2;
-  }
-
-  .subscribeForm {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 116px;
   }
 
   .divider {
@@ -271,13 +268,10 @@
   .newsletterDescription {
     margin-top: 10px;
     font-size: 16px;
-    line-height: 1.5;
   }
 
   .subscribeForm {
     margin-top: 8px;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 100px;
     gap: 8px;
   }
 
@@ -309,10 +303,6 @@
 
   .newsletter {
     grid-column: auto;
-  }
-
-  .subscribeInput {
-    width: 180px;
   }
 }
 
