@@ -19,7 +19,7 @@
   height: 100%;
   border-radius: 0;
   background: transparent;
-  aspect-ratio: auto !important;
+  --photo-aspect-ratio: auto;
 }
 
 .photoFrame :global(img) {
@@ -114,12 +114,21 @@
 
 @media (min-width: 768px) and (max-width: 1279px) {
   .hero {
-    height: 706px;
+    height: auto;
     min-height: 0;
   }
 
   .stage {
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    /* Header is an absolutely positioned overlay (91px tall at this
+       breakpoint) floating on top of the hero photo, so the Figma
+       spec's 40px top padding is added on top of its height here to
+       keep the badge clear of the nav row. */
+    padding: calc(91px + 40px) 32px 56px 32px;
+    height: auto;
   }
 
   .photoLayer,
@@ -143,9 +152,6 @@
   }
 
   .copy {
-    position: absolute;
-    inset-block-start: 81px;
-    inset-inline-start: 32px;
     width: 510px;
     max-width: none;
     padding: 0;
@@ -155,7 +161,7 @@
   .heading {
     width: 502px;
     max-width: 502px;
-    margin-top: 20px;
+    margin-top: 48px;
     font-size: 42px;
     line-height: 46px;
   }
@@ -163,7 +169,7 @@
   .description {
     width: 372px;
     max-width: 358px;
-    margin-top: 16px;
+    margin-top: 32px;
     font-size: 18px;
     line-height: 24px;
   }
@@ -171,22 +177,6 @@
   .stage > :global(section) {
     padding-inline: 0;
     max-width: none;
-  }
-
-  .stage :global(#teacher-search) {
-    position: absolute;
-    inset-block-start: 341px;
-    inset-inline-start: 32px;
-    width: 704px;
-    z-index: 2;
-  }
-
-  .stage :global(#stats) {
-    position: absolute;
-    inset-block-start: 489px;
-    inset-inline-start: 32px;
-    width: 548px;
-    z-index: 2;
   }
 
   .eyebrow {
@@ -222,7 +212,7 @@
 
   .photoFrame {
     height: 100%;
-    aspect-ratio: auto !important;
+    --photo-aspect-ratio: auto;
   }
 
   .photoFrame :global(img) {

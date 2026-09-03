@@ -27,12 +27,12 @@ export function InstrumentCategories() {
           className={styles.wave}
         />
         {/* eslint-disable @next/next/no-img-element -- decorative tablet background art, not content photos */}
-        {["24", "26", "28", "25", "27", "29"].map((wave) => (
+        {["top", "middle", "bottom"].map((position) => (
           <img
-            key={wave}
-            src={`/assets/backgrounds/music-wave-${wave}.svg`}
+            key={position}
+            src="/assets/backgrounds/music-waves-combined.svg"
             alt=""
-            className={`${styles.tabletWave} ${styles[`tabletWave${wave}`]}`}
+            className={`${styles.tabletWave} ${styles[`tabletWave${position[0].toUpperCase()}${position.slice(1)}`]}`}
           />
         ))}
         {/* eslint-enable @next/next/no-img-element */}
@@ -65,6 +65,24 @@ export function InstrumentCategories() {
           size={14}
           color="var(--brand-lavender)"
           className={`${styles.note} ${styles.noteThree}`}
+        />
+        <Icon
+          name="music-note-bold"
+          size={18}
+          color="var(--brand-lavender)"
+          className={`${styles.note} ${styles.tabletNote} ${styles.tabletNoteTwo}`}
+        />
+        <Icon
+          name="music-note-bold"
+          size={18}
+          color="var(--brand-lavender)"
+          className={`${styles.note} ${styles.tabletNote} ${styles.tabletNoteThree}`}
+        />
+        <Icon
+          name="music-note-bold"
+          size={18}
+          color="var(--brand-lavender)"
+          className={`${styles.note} ${styles.tabletNote} ${styles.tabletNoteFour}`}
         />
         <span className={`${styles.accentLine} ${styles.accentHeading}`} />
         <span className={`${styles.accentLine} ${styles.accentActionTop}`} />
