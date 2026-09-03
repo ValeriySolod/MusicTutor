@@ -61,7 +61,7 @@
 }
 
 .card:nth-child(1) .photo :global(img) {
-  object-position: center;
+  object-position: center 28%;
   transform: scaleX(-1);
 }
 
@@ -248,5 +248,12 @@
 
   .header h2 {
     font-size: 36px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container.container {
+    max-width: 1440px;
+    padding-inline: 40px;
   }
 }

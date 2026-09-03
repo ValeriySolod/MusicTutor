@@ -140,14 +140,12 @@
     align-items: center;
   }
 
-  .desktopNav {
-    position: absolute;
-    inset-inline-start: 50%;
-    transform: translateX(-50%);
-  }
-
   .actionsGroup {
     justify-content: flex-end;
+  }
+
+  .desktopActions {
+    gap: 32px;
   }
 
   .secondaryAction {

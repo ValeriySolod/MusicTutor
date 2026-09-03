@@ -55,7 +55,7 @@
    are the smaller mobile cluster near the More button instead. */
 .noteTopOne,
 .noteTopTwo {
-  display: none !important;
+  --icon-display: none;
 }
 
 .accentLine {
@@ -234,7 +234,7 @@
   }
 
   .photo {
-    aspect-ratio: 173 / 300 !important;
+    --photo-aspect-ratio: 173 / 300;
   }
 
   .viewAll {
@@ -323,30 +323,27 @@
   .noteOne {
     top: 50%;
     left: 74%;
-    width: 92px !important;
-    height: 92px !important;
+    --icon-size: 92px;
     opacity: 0.36;
   }
 
   .noteTwo {
     top: 83%;
     left: 6%;
-    width: 88px !important;
-    height: 88px !important;
+    --icon-size: 88px;
     opacity: 0.36;
   }
 
   .noteThree {
     top: 76%;
     left: 79%;
-    width: 112px ;
-    height: 112px ;
+    --icon-size: 112px;
     opacity: 0.36;
   }
 
   .noteTopOne,
   .noteTopTwo {
-    display: block ;
+    --icon-display: block;
     opacity: 0.36;
   }
 
@@ -489,31 +486,33 @@
      stretching). Centered horizontally and bled slightly past the
      section edges so the lines run edge-to-edge as in Figma. */
   .wave {
-    top: -10%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 130%;
-    max-width: 130%;
-    height: auto;
+    top: -63px;
+    left: 0;
+    width: 1733.21px;
+    max-width: none;
+    height: 568.208px;
+    transform: rotate(13.096deg);
     opacity: 0.55;
   }
 
   .noteOne,
   .noteTwo,
   .noteThree {
-    display: none !important;
+    --icon-display: none;
   }
 
   .noteTopOne {
-    display: block !important;
-    top: 14%;
-    left: 72%;
+    --icon-display: block;
+    top: 9.2%;
+    left: 72.7%;
+    transform: rotate(-7.205deg);
+    aspect-ratio: 1 / 1;
   }
 
   .noteTopTwo {
-    display: block !important;
-    top: 25%;
-    left: 87%;
+    --icon-display: block;
+    top: 20.1%;
+    left: 86.9%;
   }
 
   .grid {
@@ -553,5 +552,19 @@
 
   .tagline {
     font-size: 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container.container {
+    max-width: 1360px;
+  }
+
+  .inner {
+    padding-inline: 0;
+  }
+
+  .moreItem {
+    width: auto;
   }
 }

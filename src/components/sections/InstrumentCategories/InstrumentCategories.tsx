@@ -38,7 +38,7 @@ export function InstrumentCategories() {
         {/* eslint-enable @next/next/no-img-element */}
         <Icon
           name="music-note-outline"
-          size={95}
+          size={85}
           color="var(--brand-lavender)"
           className={`${styles.note} ${styles.noteTopOne}`}
         />

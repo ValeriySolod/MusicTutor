@@ -273,7 +273,7 @@
 
   .stage :global(#stats) {
     position: absolute;
-    inset-block-start: 716px;
+    inset-block-start: 724px;
     inset-inline-start: 40px;
     z-index: 2;
   }

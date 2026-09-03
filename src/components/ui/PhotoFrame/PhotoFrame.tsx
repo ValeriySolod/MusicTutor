@@ -29,7 +29,7 @@ export function PhotoFrame({
     return (
       <div
         className={combinedClassName}
-        style={{ aspectRatio: cropAspectRatio, position: "relative" }}
+        style={{ aspectRatio: `var(--photo-aspect-ratio, ${cropAspectRatio})`, position: "relative" }}
       >
         <Image
           src={src}
