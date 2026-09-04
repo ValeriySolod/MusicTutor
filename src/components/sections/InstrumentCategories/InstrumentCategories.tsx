@@ -26,13 +26,32 @@ export function InstrumentCategories() {
           alt=""
           className={styles.wave}
         />
-        {/* eslint-disable @next/next/no-img-element -- decorative tablet background art, not content photos */}
-        {["top", "middle", "bottom"].map((position) => (
+        <Icon
+          name="music-note-outline"
+          size={42.5}
+          color="var(--brand-lavender)"
+          className={styles.mobileNote}
+        />
+        {/* eslint-disable @next/next/no-img-element -- decorative background art, not content photos */}
+        {[1, 2, 3, 4, 5, 6].map((line) => (
           <img
-            key={position}
-            src="/assets/backgrounds/music-waves-combined.svg"
+            key={line}
+            src={`/assets/backgrounds/tablet-line-0${line}.svg`}
             alt=""
-            className={`${styles.tabletWave} ${styles[`tabletWave${position[0].toUpperCase()}${position.slice(1)}`]}`}
+            className={`${styles.tabletLine} ${styles[`tabletLine${line}`]}`}
+          />
+        ))}
+        <img
+          src="/assets/backgrounds/tablet-middle-waves.svg"
+          alt=""
+          className={styles.tabletMiddleWaves}
+        />
+        {[1, 2, 3, 4, 5, 6].map((line) => (
+          <img
+            key={line}
+            src={`/assets/backgrounds/tablet-bottom-line-0${line}.svg`}
+            alt=""
+            className={`${styles.tabletBottomLine} ${styles[`tabletBottomLine${line}`]}`}
           />
         ))}
         {/* eslint-enable @next/next/no-img-element */}
@@ -57,7 +76,7 @@ export function InstrumentCategories() {
         <Icon
           name="music-note-bold"
           size={18}
-          color="var(--accent-blush-pink)"
+          color="var(--brand-lavender)"
           className={`${styles.note} ${styles.noteTwo}`}
         />
         <Icon
@@ -141,9 +160,29 @@ export function InstrumentCategories() {
               );
             })}
             <li className={styles.moreItem}>
-              <button type="button" className={styles.moreBubble} disabled aria-disabled="true">
-                More
-              </button>
+              <span className={styles.moreWrap}>
+                <button type="button" className={styles.moreBubble} disabled aria-disabled="true">
+                  More
+                </button>
+                <Icon
+                  name="music-note-bold"
+                  size={47}
+                  color="var(--brand-lavender)"
+                  className={`${styles.moreNote} ${styles.moreNoteOne}`}
+                />
+                <Icon
+                  name="music-note-bold"
+                  size={38}
+                  color="var(--brand-lavender)"
+                  className={`${styles.moreNote} ${styles.moreNoteTwo}`}
+                />
+                <Icon
+                  name="music-note-bold"
+                  size={27}
+                  color="var(--brand-lavender)"
+                  className={`${styles.moreNote} ${styles.moreNoteThree}`}
+                />
+              </span>
             </li>
           </ul>
 
