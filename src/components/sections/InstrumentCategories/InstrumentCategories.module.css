@@ -1,11 +1,9 @@
 .section {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(
-    180deg,
-    var(--background-cream) 0%,
-    #fdf9f6 55.05%
-  );
+  background: linear-gradient(180deg,
+      var(--background-cream) 0%,
+      #fdf9f6 55.05%);
 }
 
 .decor {
@@ -21,12 +19,25 @@
   position: absolute;
   top: -6%;
   left: 0;
+  display: none;
   width: 100%;
   height: auto;
   opacity: 0.5;
 }
 
-.tabletWave {
+.mobileNote {
+  position: absolute;
+  top: 37px;
+  right: 5px;
+  --icon-display: none;
+  transform: rotate(-7.205deg);
+  aspect-ratio: 1 / 1;
+  opacity: 0.8;
+}
+
+.tabletLine,
+.tabletMiddleWaves,
+.tabletBottomLine {
   display: none;
 }
 
@@ -39,24 +50,25 @@
   opacity: 0.55;
 }
 
-.noteOne {
-  top: 70%;
-  left: 78%;
-}
 
-.noteTwo {
-  top: 84%;
-  left: 54%;
-}
-
+.noteOne,
+.noteTwo,
 .noteThree {
-  top: 88%;
-  left: 84%;
+  --icon-display: none;
 }
 
-/* Large note pair that rides the top of the wave near the heading, as in
-   the desktop Figma frame — hidden below desktop where the wave/notes
-   are the smaller mobile cluster near the More button instead. */
+.moreWrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.moreNote {
+  position: absolute;
+  --icon-display: none;
+  pointer-events: none;
+}
+
+
 .noteTopOne,
 .noteTopTwo {
   --icon-display: none;
@@ -134,7 +146,7 @@
 .card {
   display: block;
   border: 2px solid var(--border-default);
-  border-radius: var(--radius-sm);
+  border-radius: 10px;
   background-color: var(--background-white);
   overflow: hidden;
 }
@@ -170,13 +182,13 @@
 
 .name {
   color: var(--text-primary);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
 }
 
 .tagline {
   color: var(--text-secondary);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -187,6 +199,8 @@
 }
 
 .moreBubble {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -227,6 +241,21 @@
 }
 
 @media (max-width: 639px) {
+  .wave {
+    display: block;
+    top: -30px;
+    left: 50%;
+    width: 846.815px;
+    max-width: none;
+    height: 277.533px;
+    transform: translateX(-50%) rotate(13.096deg);
+    opacity: 0.8;
+  }
+
+  .mobileNote {
+    --icon-display: block;
+  }
+
   .header h2 {
     font-size: 26px;
     line-height: 1.2;
@@ -241,6 +270,11 @@
     --photo-aspect-ratio: 173 / 300;
   }
 
+  .name,
+  .tagline {
+    display: none;
+  }
+
   .viewAll {
     width: 264px;
     height: 44px;
@@ -249,6 +283,29 @@
     background-color: var(--brand-purple);
     color: var(--text-inverse);
     opacity: 1;
+  }
+
+  .moreNoteOne {
+    --icon-display: block;
+    top: calc(50% - 116.25px);
+    left: calc(50% + 21.25px);
+    transform: rotate(-7.205deg);
+    opacity: 0.9;
+  }
+
+  .moreNoteTwo {
+    --icon-display: block;
+    top: calc(50% + 77.62px);
+    left: calc(50% - 74.88px);
+    transform: rotate(-5.081deg);
+  }
+
+  .moreNoteThree {
+    --icon-display: block;
+    top: calc(50% + 127.6px);
+    left: calc(50% + 40.1px);
+    transform: rotate(-7.205deg);
+    opacity: 0.6;
   }
 }
 
@@ -275,47 +332,154 @@
 @media (min-width: 640px) and (max-width: 1023px) {
   .decor {
     background-image: none;
+    z-index: 1;
+    overflow: visible;
+  }
+
+  .section {
+    overflow: visible;
+  }
+
+
+  .inner {
+    position: relative;
+    z-index: 2;
   }
 
   .wave {
     display: none;
   }
 
-  .tabletWave {
+
+  .tabletLine {
     position: absolute;
-    left: 50%;
     display: block;
     max-width: none;
-    object-fit: fill;
     opacity: 0.86;
-    transform-origin: center;
-    filter:
-      drop-shadow(0 0 0 #c6b6ec)
-      drop-shadow(0 1px 0 rgba(198, 182, 236, 0.7));
+    transform: rotate(-8.46deg) skewX(6.09deg) scaleY(0.99);
   }
 
-  .tabletWaveTop {
-    top: -20px;
-    width: 1095.67px;
-    height: 280.289px;
-    transform: translateX(-50%) rotate(-6deg);
+  .tabletLine1 {
+    top: -72px;
+    left: calc(50% - 595.5px);
+    width: 1096.56px;
+    height: 281.49px;
+    transform-origin: 599.5px 243px;
   }
 
-  .tabletWaveMiddle {
-    top: 420px;
-    width: 1171.832px;
-    height: 275.933px;
-    transform: translateX(-50%) rotate(-14.254deg);
+  .tabletLine2 {
+    top: 86.78px;
+    left: calc(50% - 529.76px);
+    width: 1147.26px;
+    height: 230.91px;
+    transform-origin: 533.76px 84.22px;
   }
 
-  .tabletWaveBottom {
-    top: 900px;
-    width: 1102.247px;
-    height: 243.742px;
-    transform: translateX(-50%) rotate(155.398deg);
+  .tabletLine3 {
+    top: -3.67px;
+    left: calc(50% - 562.48px);
+    width: 1110.47px;
+    height: 243.89px;
+    transform-origin: 566.48px 174.67px;
+  }
+
+  .tabletLine4 {
+    top: 99.57px;
+    left: calc(50% - 506.54px);
+    width: 1156.27px;
+    height: 225.94px;
+    transform-origin: 510.54px 71.43px;
+  }
+
+  .tabletLine5 {
+    top: 43.62px;
+    left: calc(50% - 550.2px);
+    width: 1147.16px;
+    height: 246.83px;
+    transform-origin: 554.2px 127.38px;
+  }
+
+  .tabletLine6 {
+    top: 129.45px;
+    left: calc(50% - 530.05px);
+    width: 1172.89px;
+    height: 277.16px;
+    transform-origin: 534.05px 41.55px;
+  }
+
+
+  .tabletMiddleWaves {
+    position: absolute;
+    display: block;
+    max-width: none;
+    opacity: 0.86;
+    top: 856.5px;
+    left: calc(50% + 590.5px);
+    width: 1199.49px;
+    height: 450.625px;
+    transform-origin: 0 0;
+    transform: rotate(160.52deg) skewX(6.09deg) scaleY(0.99);
+  }
+
+
+  .tabletBottomLine {
+    position: absolute;
+    display: block;
+    max-width: none;
+    opacity: 0.86;
+    transform: rotate(-1.98deg) skewX(6.09deg) scaleY(0.99);
+  }
+
+  .tabletBottomLine1 {
+    top: 984.49px;
+    left: calc(50% - 453.66px);
+    width: 1105.91px;
+    height: 297.87px;
+    transform-origin: 552.96px 148.93px;
+  }
+
+  .tabletBottomLine2 {
+    top: 1150.34px;
+    left: calc(50% - 401.45px);
+    width: 1147.26px;
+    height: 230.91px;
+    transform-origin: 573.63px 115.46px;
+  }
+
+  .tabletBottomLine3 {
+    top: 1051.34px;
+    left: calc(50% - 423.26px);
+    width: 1113.38px;
+    height: 248.69px;
+    transform-origin: 556.69px 124.35px;
+  }
+
+  .tabletBottomLine4 {
+    top: 1165.82px;
+    left: calc(50% - 380.24px);
+    width: 1156.27px;
+    height: 225.94px;
+    transform-origin: 578.14px 112.97px;
+  }
+
+  .tabletBottomLine5 {
+    top: 1105.09px;
+    left: calc(50% - 415.83px);
+    width: 1147.16px;
+    height: 246.83px;
+    transform-origin: 573.58px 123.42px;
+  }
+
+  .tabletBottomLine6 {
+    top: 1192.95px;
+    left: calc(50% - 403.51px);
+    width: 1172.89px;
+    height: 277.16px;
+    transform-origin: 586.45px 138.58px;
   }
 
   .noteOne {
+    --icon-display: block;
     top: 57%;
     left: 73%;
     --icon-size: 71.114px;
@@ -324,6 +488,7 @@
   }
 
   .noteTwo {
+    --icon-display: block;
     top: 94%;
     left: 8%;
     --icon-size: 71.114px;
@@ -332,6 +497,7 @@
   }
 
   .noteThree {
+    --icon-display: block;
     top: 59%;
     left: 82%;
     --icon-size: 71.114px;
@@ -356,6 +522,7 @@
     top: 4%;
     left: 84%;
     --icon-size: 71.114px;
+
     transform: rotate(-13.329deg);
   }
 
@@ -450,14 +617,6 @@
     height: 418px;
   }
 
-  .name {
-    font-size: 20px;
-  }
-
-  .tagline {
-    font-size: 16px;
-  }
-
   .moreItem {
     width: 208px;
     height: 418px;
@@ -470,12 +629,22 @@
     font-size: 32px;
   }
 
+  .moreBubble:disabled {
+    opacity: 1;
+  }
+
   .actions {
     margin-top: 36px;
   }
 }
 
 @media (min-width: 1024px) {
+  .wave {
+    display: block;
+  }
+
+
+
   .inner {
     padding-top: var(--space-8);
     padding-bottom: var(--space-8);
@@ -505,10 +674,7 @@
     font-size: 20px;
   }
 
-  /* Full-bleed wave band: width drives the size, height stays auto so the
-     SVG's own aspect ratio is preserved (no independent width/height
-     stretching). Centered horizontally and bled slightly past the
-     section edges so the lines run edge-to-edge as in Figma. */
+
   .wave {
     top: -63px;
     left: 0;
@@ -568,14 +734,6 @@
 
   .actions {
     margin-top: var(--space-6);
-  }
-
-  .name {
-    font-size: 20px;
-  }
-
-  .tagline {
-    font-size: 16px;
   }
 }
 

@@ -81,16 +81,13 @@
   .photoWrap::before {
     content: "";
     position: absolute;
-    inset-inline: 0;
-    top: 0;
+    inset: 0;
     z-index: 1;
-    height: 104px;
     pointer-events: none;
     background: linear-gradient(
       180deg,
       var(--brand-soft-lavender) 0%,
-      rgb(231 224 244 / 0.72) 38%,
-      rgb(231 224 244 / 0) 100%
+      rgb(231 224 244 / 0) 50%
     );
   }
 }
