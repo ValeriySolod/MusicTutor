@@ -243,11 +243,11 @@
 @media (max-width: 639px) {
   .wave {
     display: block;
-    top: -30px;
+    top: -7.6923vw;
     left: 50%;
-    width: 846.815px;
+    width: 217.1321vw;
     max-width: none;
-    height: 277.533px;
+    height: auto;
     transform: translateX(-50%) rotate(13.096deg);
     opacity: 0.8;
   }
@@ -360,51 +360,51 @@
   }
 
   .tabletLine1 {
-    top: -72px;
-    left: calc(50% - 595.5px);
-    width: 1096.56px;
-    height: 281.49px;
-    transform-origin: 599.5px 243px;
+    top: -9.375vw;
+    left: calc(50% - 77.5391vw);
+    width: 142.7813vw;
+    height: auto;
+    transform-origin: 54.671% 86.326%;
   }
 
   .tabletLine2 {
-    top: 86.78px;
-    left: calc(50% - 529.76px);
-    width: 1147.26px;
-    height: 230.91px;
-    transform-origin: 533.76px 84.22px;
+    top: 11.2995vw;
+    left: calc(50% - 68.9792vw);
+    width: 149.3828vw;
+    height: auto;
+    transform-origin: 46.525% 36.473%;
   }
 
   .tabletLine3 {
-    top: -3.67px;
-    left: calc(50% - 562.48px);
-    width: 1110.47px;
-    height: 243.89px;
-    transform-origin: 566.48px 174.67px;
+    top: -0.4779vw;
+    left: calc(50% - 73.2396vw);
+    width: 144.5924vw;
+    height: auto;
+    transform-origin: 51.013% 71.618%;
   }
 
   .tabletLine4 {
-    top: 99.57px;
-    left: calc(50% - 506.54px);
-    width: 1156.27px;
-    height: 225.94px;
-    transform-origin: 510.54px 71.43px;
+    top: 12.9648vw;
+    left: calc(50% - 65.9557vw);
+    width: 150.556vw;
+    height: auto;
+    transform-origin: 44.154% 31.615%;
   }
 
   .tabletLine5 {
-    top: 43.62px;
-    left: calc(50% - 550.2px);
-    width: 1147.16px;
-    height: 246.83px;
-    transform-origin: 554.2px 127.38px;
+    top: 5.6797vw;
+    left: calc(50% - 71.6406vw);
+    width: 149.3698vw;
+    height: auto;
+    transform-origin: 48.311% 51.606%;
   }
 
   .tabletLine6 {
-    top: 129.45px;
-    left: calc(50% - 530.05px);
-    width: 1172.89px;
-    height: 277.16px;
-    transform-origin: 534.05px 41.55px;
+    top: 16.8555vw;
+    left: calc(50% - 69.0169vw);
+    width: 152.7201vw;
+    height: auto;
+    transform-origin: 45.533% 14.991%;
   }
 
 
@@ -413,10 +413,10 @@
     display: block;
     max-width: none;
     opacity: 0.86;
-    top: 856.5px;
-    left: calc(50% + 590.5px);
-    width: 1199.49px;
-    height: 450.625px;
+    top: 111.5234vw;
+    left: calc(50% + 76.888vw);
+    width: 156.1836vw;
+    height: auto;
     transform-origin: 0 0;
     transform: rotate(160.52deg) skewX(6.09deg) scaleY(0.99);
   }
@@ -431,51 +431,45 @@
   }
 
   .tabletBottomLine1 {
-    top: 984.49px;
-    left: calc(50% - 453.66px);
-    width: 1105.91px;
-    height: 297.87px;
-    transform-origin: 552.96px 148.93px;
+    top: 128.1888vw;
+    left: calc(50% - 59.0703vw);
+    width: 143.9987vw;
+    height: auto;
   }
 
   .tabletBottomLine2 {
-    top: 1150.34px;
-    left: calc(50% - 401.45px);
-    width: 1147.26px;
-    height: 230.91px;
-    transform-origin: 573.63px 115.46px;
+    top: 149.7839vw;
+    left: calc(50% - 52.2721vw);
+    width: 149.3828vw;
+    height: auto;
   }
 
   .tabletBottomLine3 {
-    top: 1051.34px;
-    left: calc(50% - 423.26px);
-    width: 1113.38px;
-    height: 248.69px;
-    transform-origin: 556.69px 124.35px;
+    top: 136.8932vw;
+    left: calc(50% - 55.112vw);
+    width: 144.9714vw;
+    height: auto;
   }
 
   .tabletBottomLine4 {
-    top: 1165.82px;
-    left: calc(50% - 380.24px);
-    width: 1156.27px;
-    height: 225.94px;
-    transform-origin: 578.14px 112.97px;
+    top: 151.7995vw;
+    left: calc(50% - 49.5104vw);
+    width: 150.556vw;
+    height: auto;
   }
 
   .tabletBottomLine5 {
-    top: 1105.09px;
-    left: calc(50% - 415.83px);
-    width: 1147.16px;
-    height: 246.83px;
-    transform-origin: 573.58px 123.42px;
+    top: 143.8919vw;
+    left: calc(50% - 54.1445vw);
+    width: 149.3698vw;
+    height: auto;
   }
 
   .tabletBottomLine6 {
-    top: 1192.95px;
-    left: calc(50% - 403.51px);
-    width: 1172.89px;
-    height: 277.16px;
-    transform-origin: 586.45px 138.58px;
+    top: 155.332vw;
+    left: calc(50% - 52.5404vw);
+    width: 152.7201vw;
+    height: auto;
   }
 
   .noteOne {
@@ -676,11 +670,11 @@
 
 
   .wave {
-    top: -63px;
+    top: -4.375vw;
     left: 0;
-    width: 1733.21px;
+    width: 120.3618vw;
     max-width: none;
-    height: 568.208px;
+    height: auto;
     transform: rotate(13.096deg);
     opacity: 0.55;
   }

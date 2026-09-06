@@ -11,7 +11,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 440px;
+  height: 750px;
   z-index: 0;
 }
 
@@ -24,7 +24,7 @@
 
 .photoFrame :global(img) {
   object-fit: cover;
-  object-position: 74% 14%;
+  object-position: 73% 14%;
 }
 
 .overlay {
@@ -32,16 +32,23 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 440px;
+  height: 750px;
   z-index: 1;
   pointer-events: none;
-  background: linear-gradient(
-    100deg,
-    var(--background-cream) 0%,
-    var(--background-cream) 32%,
-    rgba(250, 242, 239, 0.82) 55%,
-    rgba(250, 242, 239, 0.5) 100%
-  );
+  background:
+    linear-gradient(
+      180deg,
+      rgba(251, 244, 239, 0.6) 0%,
+      rgba(251, 244, 239, 0) 25%,
+      rgba(251, 244, 239, 0) 60%,
+      var(--background-cream) 82%
+    ),
+    linear-gradient(
+      90deg,
+      #fbf4ef 0%,
+      rgba(251, 244, 239, 0.586) 41.4%,
+      rgba(251, 244, 239, 0) 100%
+    );
 }
 
 .stage {
