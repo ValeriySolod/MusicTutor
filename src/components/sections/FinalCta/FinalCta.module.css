@@ -58,7 +58,7 @@
   }
 
   .photo {
-    aspect-ratio: 358 / 210 !important;
+    --photo-aspect-ratio: 358 / 210;
   }
 
   .heading {

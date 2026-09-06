@@ -25,8 +25,7 @@
 }
 
 .brandIcon {
-  width: 31px !important;
-  height: 31px !important;
+  --icon-size: 31px;
 }
 
 .desktopNav {
@@ -80,7 +79,7 @@
   border-radius: 10px;
   background-color: var(--brand-purple);
   color: var(--text-inverse);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 13px;
   white-space: nowrap;
 }
@@ -97,8 +96,7 @@
   }
 
   .brandIcon {
-    width: 37px !important;
-    height: 37px !important;
+    --icon-size: 37px;
   }
 
   .tabletActions {
@@ -157,8 +155,7 @@
   }
 
   .brandIcon {
-    width: 44px !important;
-    height: 44px !important;
+    --icon-size: 44px;
   }
 
   .navList {
