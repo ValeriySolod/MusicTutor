@@ -1,5 +1,8 @@
 # MusicTutor
 
+Дизайнер: Шкробот Вікторія
+Розробник: Солод Валерій
+
 MusicTutor is a landing page for a platform that connects students with
 verified music teachers for online and in-person lessons.
 
